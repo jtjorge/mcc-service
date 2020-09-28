@@ -4,17 +4,16 @@ import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { HealthDeclarationModule } from './health-declaration/health-declaration.module';
+import { AccountModule } from './account/account.module';
 
 @Module({
   imports: [
     GraphQLModule.forRoot({ 
-      //Configure Graphql (codefirst)
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       installSubscriptionHandlers: true,
     }),
-    TypeOrmModule.forRoot(), //database connection - ormconfig.json
-    HealthDeclarationModule, 
+    TypeOrmModule.forRoot(),
+    AccountModule, 
   ],
   controllers: [AppController],
   providers: [AppService],

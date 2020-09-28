@@ -1,0 +1,56 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type SurveyModel {
+  id: Float!
+  level: String
+  answer: String
+  description: String
+  account_id: String
+  temperature: String
+  agreement: String
+  account_type: String
+}
+
+type AccountModel {
+  id: Float!
+  name: String
+  telephone: String
+  address: String
+  gender: String
+  age: String
+  user_level: String
+  date_created: String
+}
+
+type Query {
+  getAllAccounts(skip: Int!, take: Int!): [AccountModel!]
+  getAllSurvey(skip: Int!, take: Int!): [SurveyModel!]
+}
+
+type Mutation {
+  createUpdateAccount(createUpdate: AccountInput!): AccountModel
+  createUpdateSurvey(createUpdateSurvey: SurveyInput!): SurveyModel
+}
+
+input AccountInput {
+  id: ID
+  name: String
+  telephone: String
+  address: String
+  gender: String
+  age: String
+  user_level: String
+}
+
+input SurveyInput {
+  id: ID
+  level: String
+  answer: String
+  description: String
+  account_id: String
+  temperature: String
+  agreement: String
+  account_type: String
+}
