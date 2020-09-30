@@ -1,3 +1,5 @@
+import { QuestionInput } from './../inputs/question-inputs';
+import { QuestionsModel } from './../entity/questions';
 import { SurveyInput } from './../inputs/survey-input';
 import { SurveyModel } from 'src/entity/survey';
 import { AccountModel } from 'src/entity/account';
@@ -29,32 +31,29 @@ export class AccountService {
       return await this.repositoryService.surveyModel.find({ take: take, skip: skip });
     }
 
-  async createUpdateSurvey(surveyInput: SurveyInput): Promise<SurveyModel> {
-    const input = new SurveyModel();
-      input.id = surveyInput.id,
-      input.level = surveyInput.level
-      input.answer = surveyInput.answer
-      input.description = surveyInput.description
-      input.account_id = surveyInput.account_id
-      input.temperature = surveyInput.temperature
-      input.agreement = surveyInput.agreement
-      input.account_type = surveyInput.account_type
-    return await this.repositoryService.surveyModel.save(input);
-  }
+    async createUpdateSurvey(surveyInput: SurveyInput): Promise<SurveyModel> {
+      const input = new SurveyModel();
+        input.id = surveyInput.id;
+        input.level = surveyInput.level
+        input.answer = surveyInput.answer
+        input.question_id = surveyInput.question_id
+        input.account_id = surveyInput.account_id
+        input.temperature = surveyInput.temperature
+        input.agreement = surveyInput.agreement
+        input.account_type = surveyInput.account_type
+      return await this.repositoryService.surveyModel.save(input);
+    }
+
+    async findAllQuestion(take: number, skip: number): Promise<QuestionsModel[]> {
+      return await this.repositoryService.questionsModel.find({ take: take, skip: skip });
+    }
+
+    async createUpdateQuestion(questionInput: QuestionInput): Promise<QuestionsModel> {
+      const input = new QuestionsModel();
+        input.id = questionInput.id,
+        input.level = questionInput.level,
+        input.question = questionInput.question
+      return await this.repositoryService.questionsModel.save(input);
+    }
     
 }
-/**
- * 
-
-
-
-
-
-
-
-
-
-
-
-
- */

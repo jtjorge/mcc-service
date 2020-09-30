@@ -33,12 +33,17 @@ __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
     __metadata("design:type", String)
-], SurveyModel.prototype, "description", void 0);
+], SurveyModel.prototype, "question_id", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
     __metadata("design:type", String)
 ], SurveyModel.prototype, "account_id", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], SurveyModel.prototype, "other_sickness", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),

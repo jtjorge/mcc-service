@@ -1,3 +1,5 @@
+import { QuestionInput } from './../inputs/question-inputs';
+import { QuestionsModel } from './../entity/questions';
 import { SurveyInput } from './../inputs/survey-input';
 import { SurveyModel } from 'src/entity/survey';
 import { AccountModel } from 'src/entity/account';
@@ -10,4 +12,6 @@ export declare class AccountService {
     createUpdate(accountInput: AccountInput): Promise<AccountModel>;
     findAllSurvey(take: number, skip: number): Promise<SurveyModel[]>;
     createUpdateSurvey(surveyInput: SurveyInput): Promise<SurveyModel>;
+    findAllQuestion(take: number, skip: number): Promise<QuestionsModel[]>;
+    createUpdateQuestion(questionInput: QuestionInput): Promise<QuestionsModel>;
 }

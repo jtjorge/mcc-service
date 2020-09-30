@@ -5065,9 +5065,14 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
+      "../src/entity/questions.ts": {
+        "version": "9ff342e33ee2dc6e608c686419eb8908618f10ac4dbc5994e6d8f38fbbed1726",
+        "signature": "00c49b531d8084644ace871915ed1e0b2cc465294c9b627c62b842cdd0bb2568",
+        "affectsGlobalScope": false
+      },
       "../src/entity/survey.ts": {
-        "version": "33dee367cccc81471b74a174d5ec59915c2d73411844e84de1c321b0d98e228a",
-        "signature": "971416f630b9242023530fb3b6da172f4369c4369dd847dca68671c05a9ec874",
+        "version": "2a745661a0e1542ee28cb612ccce034023debc8be8e719ac4c1c70752a22f78b",
+        "signature": "4256c38f9323eea2c2c2ee0546ffc6ec1f56df7cc6f1b2eab52da00718ccceac",
         "affectsGlobalScope": false
       },
       "../src/entity/account.ts": {
@@ -5076,13 +5081,18 @@
         "affectsGlobalScope": false
       },
       "../src/repository/repository.service.ts": {
-        "version": "ab72e34c1a304454c39ec175c4416de437b5576af6eeac6570d5315ad9d24527",
-        "signature": "fb78a164a3054abd86afbe52604ea205247e6c55a74e603a36951d03951ad111",
+        "version": "aa42c6ac050fb766eaac97c90734b0331e41d382cb4be0ad111bbb326516c0ac",
+        "signature": "e28acbede5dc9ccbdfb259a75714f99aaa9062e242aa1b1ddd8e45409d8d1ece",
+        "affectsGlobalScope": false
+      },
+      "../src/inputs/question-inputs.ts": {
+        "version": "ebe97504047c5ce506d62df348ffee9a3c06beda51868c365bf4af146f5d8f61",
+        "signature": "267bd370ae6e4a66b8a101382f74564d01e822667cd5c289052d3acff67e4139",
         "affectsGlobalScope": false
       },
       "../src/inputs/survey-input.ts": {
-        "version": "d735d676bb4a0c4fe84ebe2f745b16fbb73700552ffc73877579f60128b61c8d",
-        "signature": "17036ecfe82f4466c54744749cd7220a058f2243ecd4a3bf6a4c221997043958",
+        "version": "6654e4119a504cb9dc383743f03de11bb881b0967a28e53839dd05cbd0f554c5",
+        "signature": "bd2bccdcc702e986c00b7dd2246418bfe184179894e4fa96fc14e1f7f7f53e03",
         "affectsGlobalScope": false
       },
       "../src/inputs/account-input.ts": {
@@ -5091,17 +5101,17 @@
         "affectsGlobalScope": false
       },
       "../src/account/account.service.ts": {
-        "version": "5855bf5241137b14eaa65bf41fd062ad604b855bcb46f7560c2afabe1f24027a",
-        "signature": "72d0003372d459d44668cafe2365dc7dceddda137d24b5f45cae2e922d45fe2d",
+        "version": "623488d2b2ec34e4f9a797cfe5d0646116215abaf08ff017648152c3b8290784",
+        "signature": "8c5b30bb6fee0c0822274e55fa38210cc761da8e77620848c543aa2779595398",
         "affectsGlobalScope": false
       },
       "../src/account/account.resolver.ts": {
-        "version": "fb971ad574711f6a2e2545688c3a9d5deea1065652eb1894c0347c614cda0c7c",
-        "signature": "3e47f4793b394547e06387548841f37cf91e90c5d341d71f77df01dcef680df8",
+        "version": "21040aee4c608d4805a72a28cdbba270af582edbdeaa20f101233b3155bb6345",
+        "signature": "d1d6e90110148b525102a0f89e184cc80e31b1b3e30848c509781e59ac3ed139",
         "affectsGlobalScope": false
       },
       "../src/account/account.module.ts": {
-        "version": "8a80b6346a324a3ca95baad03975e64ae198915ef6fbfbff40811cae9ab410b4",
+        "version": "fe3653a08b11fdf02076103806a5d3d5814992e323108e7378c3686c8ad8799d",
         "signature": "7ae227e54dcf0b42820d90ceb0df5e3c9647fd74f1a1d6c9bf10742bd12c3b98",
         "affectsGlobalScope": false
       },
@@ -9599,6 +9609,7 @@
         "../src/account/account.resolver.ts",
         "../src/account/account.service.ts",
         "../src/entity/account.ts",
+        "../src/entity/questions.ts",
         "../src/entity/survey.ts",
         "../src/repository/repository.service.ts"
       ],
@@ -9606,15 +9617,19 @@
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../src/account/account.service.ts",
         "../src/entity/account.ts",
+        "../src/entity/questions.ts",
         "../src/entity/survey.ts",
         "../src/inputs/account-input.ts",
+        "../src/inputs/question-inputs.ts",
         "../src/inputs/survey-input.ts"
       ],
       "../src/account/account.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/entity/account.ts",
+        "../src/entity/questions.ts",
         "../src/entity/survey.ts",
         "../src/inputs/account-input.ts",
+        "../src/inputs/question-inputs.ts",
         "../src/inputs/survey-input.ts",
         "../src/repository/repository.service.ts"
       ],
@@ -9638,11 +9653,18 @@
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/typeorm/index.d.ts"
       ],
+      "../src/entity/questions.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../node_modules/typeorm/index.d.ts"
+      ],
       "../src/entity/survey.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/typeorm/index.d.ts"
       ],
       "../src/inputs/account-input.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts"
+      ],
+      "../src/inputs/question-inputs.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts"
       ],
       "../src/inputs/survey-input.ts": [
@@ -9657,6 +9679,7 @@
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/entity/account.ts",
+        "../src/entity/questions.ts",
         "../src/entity/survey.ts"
       ]
     },
@@ -13903,13 +13926,18 @@
       "../src/account/account.resolver.ts": [
         "../src/account/account.service.ts",
         "../src/entity/account.ts",
+        "../src/entity/questions.ts",
+        "../src/entity/survey.ts",
         "../src/inputs/account-input.ts",
+        "../src/inputs/question-inputs.ts",
         "../src/inputs/survey-input.ts"
       ],
       "../src/account/account.service.ts": [
         "../src/entity/account.ts",
+        "../src/entity/questions.ts",
         "../src/entity/survey.ts",
         "../src/inputs/account-input.ts",
+        "../src/inputs/question-inputs.ts",
         "../src/inputs/survey-input.ts",
         "../src/repository/repository.service.ts"
       ],
@@ -13919,6 +13947,7 @@
       "../src/repository/repository.service.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/entity/account.ts",
+        "../src/entity/questions.ts",
         "../src/entity/survey.ts"
       ]
     },
@@ -14985,8 +15014,10 @@
       "../src/app.module.ts",
       "../src/app.service.ts",
       "../src/entity/account.ts",
+      "../src/entity/questions.ts",
       "../src/entity/survey.ts",
       "../src/inputs/account-input.ts",
+      "../src/inputs/question-inputs.ts",
       "../src/inputs/survey-input.ts",
       "../src/main.ts",
       "../src/repository/repository.service.ts"

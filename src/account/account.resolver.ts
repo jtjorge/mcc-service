@@ -1,3 +1,5 @@
+import { QuestionInput } from './../inputs/question-inputs';
+import { QuestionsModel } from './../entity/questions';
 import { AccountModel } from './../entity/account';
 import { Args, Int, Mutation, Query, Resolver } from "@nestjs/graphql";
 import { AccountService } from "./account.service";
@@ -29,8 +31,20 @@ export class AccountResolver{
     }
 
     @Mutation(() => SurveyModel, {nullable: true})
-    async createUpdateSurvey(@Args('createUpdateSurvey') createUpdate: SurveyInput): Promise<SurveyInput> {
+    async createUpdateSurvey(@Args('createUpdateSurvey') createUpdate: SurveyInput): Promise<SurveyModel> {
         return this.accountService.createUpdateSurvey(createUpdate);
+    }
+
+    @Query(() => [QuestionsModel], {nullable:true})
+    async getAllQuestions(
+        @Args('take', { type: () => Int }) take: number,
+        @Args('skip', { type: () => Int }) skip: number,) {
+       return await this.accountService.findAllQuestion(take,skip);
+    }
+
+    @Mutation(() => QuestionsModel, {nullable: true})
+    async createUpdateQuestion(@Args('createUpdateQuestion') createUpdateQuestion: QuestionInput): Promise<QuestionsModel> {
+        return this.accountService.createUpdateQuestion(createUpdateQuestion);
     }
 
 }

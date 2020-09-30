@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountService = void 0;
+const questions_1 = require("./../entity/questions");
 const survey_1 = require("../entity/survey");
 const account_1 = require("../entity/account");
 const common_1 = require("@nestjs/common");
@@ -38,15 +39,25 @@ let AccountService = class AccountService {
     }
     async createUpdateSurvey(surveyInput) {
         const input = new survey_1.SurveyModel();
-        input.id = surveyInput.id,
-            input.level = surveyInput.level;
+        input.id = surveyInput.id;
+        input.level = surveyInput.level;
         input.answer = surveyInput.answer;
-        input.description = surveyInput.description;
+        input.question_id = surveyInput.question_id;
         input.account_id = surveyInput.account_id;
         input.temperature = surveyInput.temperature;
         input.agreement = surveyInput.agreement;
         input.account_type = surveyInput.account_type;
         return await this.repositoryService.surveyModel.save(input);
+    }
+    async findAllQuestion(take, skip) {
+        return await this.repositoryService.questionsModel.find({ take: take, skip: skip });
+    }
+    async createUpdateQuestion(questionInput) {
+        const input = new questions_1.QuestionsModel();
+        input.id = questionInput.id,
+            input.level = questionInput.level,
+            input.question = questionInput.question;
+        return await this.repositoryService.questionsModel.save(input);
     }
 };
 AccountService = __decorate([

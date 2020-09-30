@@ -19,11 +19,15 @@ export class SurveyModel {
 
     @Field({nullable: true})
     @Column()
-    description: string;
+    question_id: string;
 
     @Field({nullable: true})
     @Column()
     account_id: string;
+
+    @Field({nullable: true})
+    @Column()
+    other_sickness: string;
 
     @Field({nullable: true})
     @Column()

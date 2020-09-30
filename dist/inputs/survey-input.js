@@ -28,7 +28,11 @@ __decorate([
 __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)
-], SurveyInput.prototype, "description", void 0);
+], SurveyInput.prototype, "question_id", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    __metadata("design:type", String)
+], SurveyInput.prototype, "other_sickness", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)

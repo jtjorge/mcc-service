@@ -13,6 +13,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountResolver = void 0;
+const question_inputs_1 = require("./../inputs/question-inputs");
+const questions_1 = require("./../entity/questions");
 const account_1 = require("./../entity/account");
 const graphql_1 = require("@nestjs/graphql");
 const account_service_1 = require("./account.service");
@@ -34,6 +36,12 @@ let AccountResolver = class AccountResolver {
     }
     async createUpdateSurvey(createUpdate) {
         return this.accountService.createUpdateSurvey(createUpdate);
+    }
+    async getAllQuestions(take, skip) {
+        return await this.accountService.findAllQuestion(take, skip);
+    }
+    async createUpdateQuestion(createUpdateQuestion) {
+        return this.accountService.createUpdateQuestion(createUpdateQuestion);
     }
 };
 __decorate([
@@ -66,6 +74,21 @@ __decorate([
     __metadata("design:paramtypes", [survey_input_1.SurveyInput]),
     __metadata("design:returntype", Promise)
 ], AccountResolver.prototype, "createUpdateSurvey", null);
+__decorate([
+    graphql_1.Query(() => [questions_1.QuestionsModel], { nullable: true }),
+    __param(0, graphql_1.Args('take', { type: () => graphql_1.Int })),
+    __param(1, graphql_1.Args('skip', { type: () => graphql_1.Int })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, Number]),
+    __metadata("design:returntype", Promise)
+], AccountResolver.prototype, "getAllQuestions", null);
+__decorate([
+    graphql_1.Mutation(() => questions_1.QuestionsModel, { nullable: true }),
+    __param(0, graphql_1.Args('createUpdateQuestion')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [question_inputs_1.QuestionInput]),
+    __metadata("design:returntype", Promise)
+], AccountResolver.prototype, "createUpdateQuestion", null);
 AccountResolver = __decorate([
     graphql_1.Resolver(),
     __metadata("design:paramtypes", [account_service_1.AccountService])

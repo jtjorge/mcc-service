@@ -12,7 +12,10 @@ export class SurveyInput {
     answer: string;
 
     @Field({nullable: true})
-    description: string;
+    question_id: string;
+
+    @Field({nullable: true})
+    other_sickness: string;
 
     @Field({nullable: true})
     account_id: string;
