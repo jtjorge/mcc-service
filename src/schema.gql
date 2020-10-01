@@ -1,0 +1,73 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type QuestionsModel {
+  id: Float!
+  level: Float!
+  question: String!
+  created_date: Float!
+}
+
+type SurveyModel {
+  id: Float!
+  level: String
+  answer: String
+  question_id: String
+  account_id: String
+  other_sickness: String
+  temperature: String
+  agreement: String
+  account_type: String
+}
+
+type AccountModel {
+  id: Float!
+  name: String
+  telephone: String
+  address: String
+  gender: String
+  age: String
+  user_level: String
+  date_created: String
+}
+
+type Query {
+  getAllAccounts(skip: Int!, take: Int!): [AccountModel!]
+  getAllSurvey(skip: Int!, take: Int!): [SurveyModel!]
+  getAllQuestions(skip: Int!, take: Int!): [QuestionsModel!]
+}
+
+type Mutation {
+  createUpdateAccount(createUpdate: AccountInput!): AccountModel
+  createUpdateSurvey(createUpdateSurvey: SurveyInput!): SurveyModel
+  createUpdateQuestion(createUpdateQuestion: QuestionInput!): QuestionsModel
+}
+
+input AccountInput {
+  id: ID
+  name: String
+  telephone: String
+  address: String
+  gender: String
+  age: String
+  user_level: String
+}
+
+input SurveyInput {
+  id: ID
+  level: String
+  answer: String
+  question_id: String
+  other_sickness: String
+  account_id: String
+  temperature: String
+  agreement: String
+  account_type: String
+}
+
+input QuestionInput {
+  id: ID
+  level: Float!
+  question: String!
+}

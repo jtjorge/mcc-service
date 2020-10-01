@@ -1,0 +1,18 @@
+{
+    "type": "mysql",
+    "host": "162.241.24.152",
+    "port": 3306,
+    "username": "sevlaye3_jomer",
+    "password": "Gr*l0v3R",
+    "database": "sevlaye3_hdlc",
+    "entities": ["dist/**/*.js"],
+    "autoLoadEntities": true,
+    "logging": "all",
+    "migrations": ["src/migration/**/*.ts"],
+    "subscribers": ["src/subscriber/**/*.ts"],
+    "cli": {
+        "entitiesDir": "src/entity",
+        "migrationsDir": "src/migration",
+        "subscribersDir": "src/subscriber"
+    }
+}
