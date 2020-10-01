@@ -6,35 +6,44 @@ type QuestionsModel {
   id: Float!
   level: Float!
   question: String!
-  created_date: Float!
+  created_date: DateTime!
 }
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
 
 type SurveyModel {
   id: Float!
   level: String
   answer: String
   question_id: String
-  account_id: String
+  account_name: String
   other_sickness: String
   temperature: String
   agreement: String
   account_type: String
+  date_created: DateTime
 }
 
 type AccountModel {
   id: Float!
+  user_id: String
+  password: String
   name: String
   telephone: String
   address: String
   gender: String
   age: String
   user_level: String
-  date_created: String
+  date_created: DateTime
 }
 
 type Query {
   getAllAccounts(skip: Int!, take: Int!): [AccountModel!]
   getAllSurvey(skip: Int!, take: Int!): [SurveyModel!]
+  getCredentials(password: String!, user_id: String!): AccountModel
   getAllQuestions(skip: Int!, take: Int!): [QuestionsModel!]
 }
 
@@ -46,12 +55,15 @@ type Mutation {
 
 input AccountInput {
   id: ID
+  user_id: String
+  password: String
   name: String
   telephone: String
   address: String
   gender: String
   age: String
   user_level: String
+  date_created: DateTime
 }
 
 input SurveyInput {
@@ -60,10 +72,11 @@ input SurveyInput {
   answer: String
   question_id: String
   other_sickness: String
-  account_id: String
+  account_name: String
   temperature: String
   agreement: String
   account_type: String
+  date_created: DateTime
 }
 
 input QuestionInput {

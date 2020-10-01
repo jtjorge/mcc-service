@@ -18,7 +18,7 @@ export class SurveyInput {
     other_sickness: string;
 
     @Field({nullable: true})
-    account_id: string;
+    account_name: string;
 
     @Field({nullable: true})
     temperature: string;
@@ -28,4 +28,7 @@ export class SurveyInput {
 
     @Field({nullable: true})
     account_type: string;   
+    
+    @Field({nullable: true})
+    date_created: Date;   
 }

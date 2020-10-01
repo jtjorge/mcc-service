@@ -20,6 +20,14 @@ __decorate([
 __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)
+], AccountInput.prototype, "user_id", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    __metadata("design:type", String)
+], AccountInput.prototype, "password", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    __metadata("design:type", String)
 ], AccountInput.prototype, "name", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
@@ -41,6 +49,10 @@ __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)
 ], AccountInput.prototype, "user_level", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    __metadata("design:type", Date)
+], AccountInput.prototype, "date_created", void 0);
 AccountInput = __decorate([
     graphql_1.InputType()
 ], AccountInput);

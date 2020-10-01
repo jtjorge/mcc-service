@@ -34,6 +34,9 @@ let AccountResolver = class AccountResolver {
     async getAllSurvey(take, skip) {
         return await this.accountService.findAll(take, skip);
     }
+    async getCredentials(user_id, password) {
+        return await this.accountService.login(user_id, password);
+    }
     async createUpdateSurvey(createUpdate) {
         return this.accountService.createUpdateSurvey(createUpdate);
     }
@@ -67,6 +70,14 @@ __decorate([
     __metadata("design:paramtypes", [Number, Number]),
     __metadata("design:returntype", Promise)
 ], AccountResolver.prototype, "getAllSurvey", null);
+__decorate([
+    graphql_1.Query(() => account_1.AccountModel, { nullable: true }),
+    __param(0, graphql_1.Args('user_id', { type: () => String })),
+    __param(1, graphql_1.Args('password', { type: () => String })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", Promise)
+], AccountResolver.prototype, "getCredentials", null);
 __decorate([
     graphql_1.Mutation(() => survey_1.SurveyModel, { nullable: true }),
     __param(0, graphql_1.Args('createUpdateSurvey')),

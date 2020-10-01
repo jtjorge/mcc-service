@@ -23,9 +23,20 @@ __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
     __metadata("design:type", String)
+], AccountModel.prototype, "user_id", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], AccountModel.prototype, "password", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
 ], AccountModel.prototype, "name", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
+    typeorm_1.Column(),
     __metadata("design:type", String)
 ], AccountModel.prototype, "telephone", void 0);
 __decorate([
@@ -40,6 +51,7 @@ __decorate([
 ], AccountModel.prototype, "gender", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
+    typeorm_1.Column(),
     __metadata("design:type", String)
 ], AccountModel.prototype, "age", void 0);
 __decorate([
@@ -50,7 +62,7 @@ __decorate([
 __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
-    __metadata("design:type", String)
+    __metadata("design:type", Date)
 ], AccountModel.prototype, "date_created", void 0);
 AccountModel = __decorate([
     graphql_1.ObjectType(),

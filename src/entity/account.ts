@@ -11,9 +11,18 @@ export class AccountModel {
 
     @Field({nullable: true})
     @Column()
+    user_id: string;
+
+    @Field({nullable: true})
+    @Column()
+    password: string;
+
+    @Field({nullable: true})
+    @Column()
     name: string;
 
     @Field({nullable: true})
+    @Column()
     telephone: string;
 
     @Field({nullable: true})
@@ -25,6 +34,7 @@ export class AccountModel {
     gender: string;
 
     @Field({nullable: true})
+    @Column()
     age: string;
 
     @Field({nullable: true})
@@ -33,6 +43,6 @@ export class AccountModel {
 
     @Field({nullable: true})
     @Column()
-    date_created: string;
+    date_created: Date;
 
 }

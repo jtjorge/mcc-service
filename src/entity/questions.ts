@@ -19,6 +19,6 @@ export class QuestionsModel {
 
     @Field({nullable: false})
     @Column()
-    created_date: number;
+    created_date: Date;
 
 }

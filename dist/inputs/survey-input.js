@@ -36,7 +36,7 @@ __decorate([
 __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)
-], SurveyInput.prototype, "account_id", void 0);
+], SurveyInput.prototype, "account_name", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)
@@ -49,6 +49,10 @@ __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)
 ], SurveyInput.prototype, "account_type", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    __metadata("design:type", Date)
+], SurveyInput.prototype, "date_created", void 0);
 SurveyInput = __decorate([
     graphql_1.InputType()
 ], SurveyInput);

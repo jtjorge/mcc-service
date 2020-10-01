@@ -23,7 +23,7 @@ export class SurveyModel {
 
     @Field({nullable: true})
     @Column()
-    account_id: string;
+    account_name: string;
 
     @Field({nullable: true})
     @Column()
@@ -41,4 +41,8 @@ export class SurveyModel {
     @Field({nullable: true})
     @Column()
     account_type: string;   
+
+    @Field({nullable: true})
+    @Column()
+    date_created: Date;   
 }

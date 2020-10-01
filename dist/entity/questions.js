@@ -32,7 +32,7 @@ __decorate([
 __decorate([
     graphql_1.Field({ nullable: false }),
     typeorm_1.Column(),
-    __metadata("design:type", Number)
+    __metadata("design:type", Date)
 ], QuestionsModel.prototype, "created_date", void 0);
 QuestionsModel = __decorate([
     graphql_1.ObjectType(),

@@ -7,6 +7,12 @@ export class AccountInput {
     id: number;
 
     @Field({nullable: true})
+    user_id: string;
+
+    @Field({nullable: true})
+    password: string;
+
+    @Field({nullable: true})
     name: string;
 
     @Field({nullable: true})
@@ -23,4 +29,7 @@ export class AccountInput {
 
     @Field({nullable: true})
     user_level: string;
+
+    @Field({nullable: true})
+    date_created: Date;
 }

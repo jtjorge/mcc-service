@@ -23,6 +23,10 @@ let AccountService = class AccountService {
     async findAll(take, skip) {
         return await this.repositoryService.accountModel.find({ take: take, skip: skip });
     }
+    async login(user_id, password) {
+        const login = await this.repositoryService.accountModel.findOne({ user_id: user_id, password: password });
+        return login;
+    }
     async createUpdate(accountInput) {
         const input = new account_1.AccountModel();
         input.id = accountInput.id,
@@ -32,7 +36,18 @@ let AccountService = class AccountService {
         input.gender = accountInput.gender;
         input.age = accountInput.age;
         input.user_level = accountInput.user_level;
-        return await this.repositoryService.accountModel.save(input);
+        input.date_created = accountInput.date_created;
+        input.user_id = input.user_id;
+        input.password = input.password;
+        try {
+            return await this.repositoryService.accountModel.save(input);
+        }
+        catch (exception) {
+            throw new common_1.HttpException({
+                status: common_1.HttpStatus.INTERNAL_SERVER_ERROR,
+                error: exception,
+            }, common_1.HttpStatus.FORBIDDEN);
+        }
     }
     async findAllSurvey(take, skip) {
         return await this.repositoryService.surveyModel.find({ take: take, skip: skip });
@@ -42,11 +57,13 @@ let AccountService = class AccountService {
         input.id = surveyInput.id;
         input.level = surveyInput.level;
         input.answer = surveyInput.answer;
+        input.other_sickness = surveyInput.other_sickness;
         input.question_id = surveyInput.question_id;
-        input.account_id = surveyInput.account_id;
+        input.account_name = surveyInput.account_name;
         input.temperature = surveyInput.temperature;
         input.agreement = surveyInput.agreement;
         input.account_type = surveyInput.account_type;
+        input.date_created = surveyInput.date_created;
         return await this.repositoryService.surveyModel.save(input);
     }
     async findAllQuestion(take, skip) {

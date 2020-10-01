@@ -38,7 +38,7 @@ __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
     __metadata("design:type", String)
-], SurveyModel.prototype, "account_id", void 0);
+], SurveyModel.prototype, "account_name", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
@@ -59,6 +59,11 @@ __decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)
 ], SurveyModel.prototype, "account_type", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    typeorm_1.Column(),
+    __metadata("design:type", Date)
+], SurveyModel.prototype, "date_created", void 0);
 SurveyModel = __decorate([
     graphql_1.ObjectType(),
     typeorm_1.Entity({ name: 'tbl_survey' })

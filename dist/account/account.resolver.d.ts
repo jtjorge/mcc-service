@@ -11,6 +11,7 @@ export declare class AccountResolver {
     getAllAccounts(take: number, skip: number): Promise<AccountModel[]>;
     createUpdateAccount(createUpdate: AccountInput): Promise<AccountInput>;
     getAllSurvey(take: number, skip: number): Promise<AccountModel[]>;
+    getCredentials(user_id: string, password: string): Promise<AccountModel>;
     createUpdateSurvey(createUpdate: SurveyInput): Promise<SurveyModel>;
     getAllQuestions(take: number, skip: number): Promise<QuestionsModel[]>;
     createUpdateQuestion(createUpdateQuestion: QuestionInput): Promise<QuestionsModel>;
