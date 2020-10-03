@@ -23,7 +23,7 @@ __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
     __metadata("design:type", String)
-], AccountModel.prototype, "user_id", void 0);
+], AccountModel.prototype, "username", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),

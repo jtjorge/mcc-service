@@ -14,7 +14,7 @@ const graphql_1 = require("@nestjs/graphql");
 let QuestionInput = class QuestionInput {
 };
 __decorate([
-    graphql_1.Field(() => graphql_1.ID, { nullable: true }),
+    graphql_1.Field({ nullable: true }),
     __metadata("design:type", Number)
 ], QuestionInput.prototype, "id", void 0);
 __decorate([

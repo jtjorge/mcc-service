@@ -9,6 +9,8 @@ export declare class AccountResolver {
     private accountService;
     constructor(accountService: AccountService);
     getAllAccounts(take: number, skip: number): Promise<AccountModel[]>;
+    getAllManagedAccounts(take: number, skip: number, user_level: string, keyword: string): Promise<AccountModel[]>;
+    getDistinctAccount(): Promise<AccountModel[]>;
     createUpdateAccount(createUpdate: AccountInput): Promise<AccountInput>;
     getAllSurvey(take: number, skip: number): Promise<AccountModel[]>;
     getCredentials(user_id: string, password: string): Promise<AccountModel>;

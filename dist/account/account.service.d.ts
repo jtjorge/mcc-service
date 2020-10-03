@@ -9,7 +9,9 @@ export declare class AccountService {
     private repositoryService;
     constructor(repositoryService: RepositoryService);
     findAll(take: number, skip: number): Promise<AccountModel[]>;
-    login(user_id: string, password: string): Promise<AccountModel>;
+    findAllManagedAccounts(take: number, skip: number, user_level: string, keyword: string): Promise<AccountModel[]>;
+    findDistictAccount(): Promise<AccountModel[]>;
+    login(username: string, password: string): Promise<AccountModel>;
     createUpdate(accountInput: AccountInput): Promise<AccountModel>;
     findAllSurvey(take: number, skip: number): Promise<SurveyModel[]>;
     createUpdateSurvey(surveyInput: SurveyInput): Promise<SurveyModel>;

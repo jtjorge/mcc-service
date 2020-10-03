@@ -6,7 +6,6 @@ import { AccountService } from "./account.service";
 import { AccountInput } from 'src/inputs/account-input';
 import { SurveyModel } from 'src/entity/survey';
 import { SurveyInput } from 'src/inputs/survey-input';
-import { Observable } from 'rxjs';
 
 @Resolver()
 export class AccountResolver{
@@ -17,6 +16,20 @@ export class AccountResolver{
         @Args('take', { type: () => Int }) take: number,
         @Args('skip', { type: () => Int }) skip: number,) {
        return await this.accountService.findAll(take,skip);
+    }
+
+    @Query(() => [AccountModel], {nullable:true})
+    async getAllManagedAccounts(
+        @Args('take', { type: () => Int }) take: number,
+        @Args('skip', { type: () => Int }) skip: number,
+        @Args('user_level', { type: () => String }) user_level: string,
+        @Args('keyword', { nullable:true}) keyword: string,) {
+       return await this.accountService.findAllManagedAccounts(take,skip,user_level,keyword);
+    }
+
+    @Query(() => [AccountModel], {nullable:true})
+    async getDistinctAccount(){
+       return await this.accountService.findDistictAccount();
     }
 
     @Mutation(() => AccountModel, {nullable: true})
@@ -32,7 +45,7 @@ export class AccountResolver{
     }
     @Query(()=> AccountModel, {nullable: true})
     async getCredentials(
-        @Args('user_id', { type: () => String }) user_id: string,
+        @Args('username', { type: () => String }) user_id: string,
         @Args('password', { type: () => String }) password: string,
     ): Promise<AccountModel> {
         return await this.accountService.login(user_id,password);

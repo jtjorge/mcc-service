@@ -4,7 +4,7 @@ export declare class SurveyInput {
     answer: string;
     question_id: string;
     other_sickness: string;
-    account_name: string;
+    account_id: string;
     temperature: string;
     agreement: string;
     account_type: string;

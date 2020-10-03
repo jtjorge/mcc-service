@@ -11,7 +11,7 @@ export class AccountModel {
 
     @Field({nullable: true})
     @Column()
-    user_id: string;
+    username: string;
 
     @Field({nullable: true})
     @Column()

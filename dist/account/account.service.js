@@ -23,8 +23,20 @@ let AccountService = class AccountService {
     async findAll(take, skip) {
         return await this.repositoryService.accountModel.find({ take: take, skip: skip });
     }
-    async login(user_id, password) {
-        const login = await this.repositoryService.accountModel.findOne({ user_id: user_id, password: password });
+    async findAllManagedAccounts(take, skip, user_level, keyword) {
+        return await this.repositoryService.accountModel.find({
+            where: {
+                user_level,
+            },
+            take: take,
+            skip: skip
+        });
+    }
+    async findDistictAccount() {
+        return await this.repositoryService.accountModel.find();
+    }
+    async login(username, password) {
+        const login = await this.repositoryService.accountModel.findOne({ username: username, password: password });
         return login;
     }
     async createUpdate(accountInput) {
@@ -37,10 +49,19 @@ let AccountService = class AccountService {
         input.age = accountInput.age;
         input.user_level = accountInput.user_level;
         input.date_created = accountInput.date_created;
-        input.user_id = input.user_id;
-        input.password = input.password;
+        input.username = accountInput.username;
+        input.password = accountInput.password;
         try {
-            return await this.repositoryService.accountModel.save(input);
+            const verify = await this.repositoryService.accountModel.findOne({ username: accountInput.username });
+            if (!verify) {
+                return await this.repositoryService.accountModel.save(input);
+            }
+            else {
+                throw new common_1.HttpException({
+                    status: common_1.HttpStatus.AMBIGUOUS,
+                    error: 'Account already exist',
+                }, common_1.HttpStatus.AMBIGUOUS);
+            }
         }
         catch (exception) {
             throw new common_1.HttpException({
@@ -59,7 +80,7 @@ let AccountService = class AccountService {
         input.answer = surveyInput.answer;
         input.other_sickness = surveyInput.other_sickness;
         input.question_id = surveyInput.question_id;
-        input.account_name = surveyInput.account_name;
+        input.account_id = surveyInput.account_id;
         input.temperature = surveyInput.temperature;
         input.agreement = surveyInput.agreement;
         input.account_type = surveyInput.account_type;

@@ -3,7 +3,7 @@ export declare class SurveyModel {
     level: string;
     answer: string;
     question_id: string;
-    account_name: string;
+    account_id: string;
     other_sickness: string;
     temperature: string;
     agreement: string;

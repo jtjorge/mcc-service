@@ -19,7 +19,7 @@ type SurveyModel {
   level: String
   answer: String
   question_id: String
-  account_name: String
+  account_id: String
   other_sickness: String
   temperature: String
   agreement: String
@@ -29,7 +29,7 @@ type SurveyModel {
 
 type AccountModel {
   id: Float!
-  user_id: String
+  username: String
   password: String
   name: String
   telephone: String
@@ -42,8 +42,10 @@ type AccountModel {
 
 type Query {
   getAllAccounts(skip: Int!, take: Int!): [AccountModel!]
+  getAllManagedAccounts(keyword: String, user_level: String!, skip: Int!, take: Int!): [AccountModel!]
+  getDistinctAccount: [AccountModel!]
   getAllSurvey(skip: Int!, take: Int!): [SurveyModel!]
-  getCredentials(password: String!, user_id: String!): AccountModel
+  getCredentials(password: String!, username: String!): AccountModel
   getAllQuestions(skip: Int!, take: Int!): [QuestionsModel!]
 }
 
@@ -54,8 +56,8 @@ type Mutation {
 }
 
 input AccountInput {
-  id: ID
-  user_id: String
+  id: Float
+  username: String
   password: String
   name: String
   telephone: String
@@ -67,12 +69,12 @@ input AccountInput {
 }
 
 input SurveyInput {
-  id: ID
+  id: Float
   level: String
   answer: String
   question_id: String
   other_sickness: String
-  account_name: String
+  account_id: String
   temperature: String
   agreement: String
   account_type: String
@@ -80,7 +82,7 @@ input SurveyInput {
 }
 
 input QuestionInput {
-  id: ID
+  id: Float
   level: Float!
   question: String!
 }

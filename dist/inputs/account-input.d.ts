@@ -1,6 +1,6 @@
 export declare class AccountInput {
     id: number;
-    user_id: string;
+    username: string;
     password: string;
     name: string;
     telephone: string;

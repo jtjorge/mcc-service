@@ -28,6 +28,12 @@ let AccountResolver = class AccountResolver {
     async getAllAccounts(take, skip) {
         return await this.accountService.findAll(take, skip);
     }
+    async getAllManagedAccounts(take, skip, user_level, keyword) {
+        return await this.accountService.findAllManagedAccounts(take, skip, user_level, keyword);
+    }
+    async getDistinctAccount() {
+        return await this.accountService.findDistictAccount();
+    }
     async createUpdateAccount(createUpdate) {
         return this.accountService.createUpdate(createUpdate);
     }
@@ -56,6 +62,22 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AccountResolver.prototype, "getAllAccounts", null);
 __decorate([
+    graphql_1.Query(() => [account_1.AccountModel], { nullable: true }),
+    __param(0, graphql_1.Args('take', { type: () => graphql_1.Int })),
+    __param(1, graphql_1.Args('skip', { type: () => graphql_1.Int })),
+    __param(2, graphql_1.Args('user_level', { type: () => String })),
+    __param(3, graphql_1.Args('keyword', { nullable: true })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, Number, String, String]),
+    __metadata("design:returntype", Promise)
+], AccountResolver.prototype, "getAllManagedAccounts", null);
+__decorate([
+    graphql_1.Query(() => [account_1.AccountModel], { nullable: true }),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], AccountResolver.prototype, "getDistinctAccount", null);
+__decorate([
     graphql_1.Mutation(() => account_1.AccountModel, { nullable: true }),
     __param(0, graphql_1.Args('createUpdate')),
     __metadata("design:type", Function),
@@ -72,7 +94,7 @@ __decorate([
 ], AccountResolver.prototype, "getAllSurvey", null);
 __decorate([
     graphql_1.Query(() => account_1.AccountModel, { nullable: true }),
-    __param(0, graphql_1.Args('user_id', { type: () => String })),
+    __param(0, graphql_1.Args('username', { type: () => String })),
     __param(1, graphql_1.Args('password', { type: () => String })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String]),

@@ -14,13 +14,13 @@ const graphql_1 = require("@nestjs/graphql");
 let AccountInput = class AccountInput {
 };
 __decorate([
-    graphql_1.Field(() => graphql_1.ID, { nullable: true }),
+    graphql_1.Field({ nullable: true }),
     __metadata("design:type", Number)
 ], AccountInput.prototype, "id", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)
-], AccountInput.prototype, "user_id", void 0);
+], AccountInput.prototype, "username", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)

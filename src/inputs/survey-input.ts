@@ -2,7 +2,7 @@ import { Field, ID, InputType } from "@nestjs/graphql";
 
 @InputType()
 export class SurveyInput {
-    @Field(() => ID,{nullable: true })
+    @Field({nullable: true })
     id: number;
 
     @Field({nullable: true})
@@ -18,7 +18,7 @@ export class SurveyInput {
     other_sickness: string;
 
     @Field({nullable: true})
-    account_name: string;
+    account_id: string;
 
     @Field({nullable: true})
     temperature: string;
