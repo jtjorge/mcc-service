@@ -21,6 +21,7 @@ const account_service_1 = require("./account.service");
 const account_input_1 = require("../inputs/account-input");
 const survey_1 = require("../entity/survey");
 const survey_input_1 = require("../inputs/survey-input");
+const AccountManageStore_1 = require("../entity/response-storage/AccountManageStore");
 let AccountResolver = class AccountResolver {
     constructor(accountService) {
         this.accountService = accountService;
@@ -37,8 +38,8 @@ let AccountResolver = class AccountResolver {
     async createUpdateAccount(createUpdate) {
         return this.accountService.createUpdate(createUpdate);
     }
-    async getAllSurvey(take, skip) {
-        return await this.accountService.findAll(take, skip);
+    async getAllSurvey(level, uniqueNumber) {
+        return await this.accountService.getAllSurvey(level, uniqueNumber);
     }
     async getCredentials(user_id, password) {
         return await this.accountService.login(user_id, password);
@@ -62,7 +63,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AccountResolver.prototype, "getAllAccounts", null);
 __decorate([
-    graphql_1.Query(() => [account_1.AccountModel], { nullable: true }),
+    graphql_1.Query(() => AccountManageStore_1.AccountManageStore, { nullable: true }),
     __param(0, graphql_1.Args('take', { type: () => graphql_1.Int })),
     __param(1, graphql_1.Args('skip', { type: () => graphql_1.Int })),
     __param(2, graphql_1.Args('user_level', { type: () => String })),
@@ -86,10 +87,10 @@ __decorate([
 ], AccountResolver.prototype, "createUpdateAccount", null);
 __decorate([
     graphql_1.Query(() => [survey_1.SurveyModel], { nullable: true }),
-    __param(0, graphql_1.Args('take', { type: () => graphql_1.Int })),
-    __param(1, graphql_1.Args('skip', { type: () => graphql_1.Int })),
+    __param(0, graphql_1.Args('level', { type: () => graphql_1.Int })),
+    __param(1, graphql_1.Args('uniqueNumber', { type: () => String })),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number, Number]),
+    __metadata("design:paramtypes", [Number, String]),
     __metadata("design:returntype", Promise)
 ], AccountResolver.prototype, "getAllSurvey", null);
 __decorate([

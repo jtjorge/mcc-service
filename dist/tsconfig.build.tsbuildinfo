@@ -1766,12 +1766,12 @@
         "signature": "897bafc7cd36d400b65d61e2cd3c646f5d3759aa763867d0968993f1cea35b59",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-server-plugin-base/node_modules/apollo-server-types/dist/index.d.ts": {
+      "../node_modules/apollo-cache-control/node_modules/apollo-server-types/dist/index.d.ts": {
         "version": "2fa88952973ead32eb5d2477bd891f223dafa941f11e7f7d5e20132c08ce98a0",
         "signature": "2fa88952973ead32eb5d2477bd891f223dafa941f11e7f7d5e20132c08ce98a0",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-server-plugin-base/dist/index.d.ts": {
+      "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts": {
         "version": "3c8aa6e26f7ee68d539fadb149143b30a297c9ef89d2e89228c4e649f221de30",
         "signature": "3c8aa6e26f7ee68d539fadb149143b30a297c9ef89d2e89228c4e649f221de30",
         "affectsGlobalScope": false
@@ -1784,6 +1784,26 @@
       "../node_modules/apollo-datasource/dist/index.d.ts": {
         "version": "ad88412b97996eb3cf5f3f78bee6ad455c5007296fc09323cc600e72b5609a5b",
         "signature": "ad88412b97996eb3cf5f3f78bee6ad455c5007296fc09323cc600e72b5609a5b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-engine-reporting-protobuf/dist/protobuf.d.ts": {
+        "version": "7d55c8ddbe2668b8744e5a49e94cd5422af94509d796a0bb3c5b0cdb8a0efa5f",
+        "signature": "7d55c8ddbe2668b8744e5a49e94cd5422af94509d796a0bb3c5b0cdb8a0efa5f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts": {
+        "version": "931278fdee439596382fb5783f955c70f5d7eae4369667b47cf89588fa470fd7",
+        "signature": "931278fdee439596382fb5783f955c70f5d7eae4369667b47cf89588fa470fd7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-server-types/dist/index.d.ts": {
+        "version": "5a553979406dee2dba028437e87245d706fa0b5b9493b4a27182b32ae877dc5f",
+        "signature": "5a553979406dee2dba028437e87245d706fa0b5b9493b4a27182b32ae877dc5f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-server-plugin-base/dist/index.d.ts": {
+        "version": "66aae36538952c6916d2224dbf9bb1a2e00416b7abc45dcbbfe7a07b95ae069b",
+        "signature": "66aae36538952c6916d2224dbf9bb1a2e00416b7abc45dcbbfe7a07b95ae069b",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/schemaVisitor.d.ts": {
@@ -2116,11 +2136,6 @@
         "signature": "02d56ea773b997676c89b0c32e3c56633875a177c812259dee7e50deebecdf07",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-server-core/node_modules/apollo-server-types/dist/index.d.ts": {
-        "version": "2fa88952973ead32eb5d2477bd891f223dafa941f11e7f7d5e20132c08ce98a0",
-        "signature": "2fa88952973ead32eb5d2477bd891f223dafa941f11e7f7d5e20132c08ce98a0",
-        "affectsGlobalScope": false
-      },
       "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts": {
         "version": "79352df02a802fcd225db672144ab28697faff057b7a1646a57c69e5afd06ffc",
         "signature": "79352df02a802fcd225db672144ab28697faff057b7a1646a57c69e5afd06ffc",
@@ -2416,6 +2431,21 @@
         "signature": "7668c31fc1a0d6c5ee0ae1048d41f7232a56fbe18367929f78bd0c77303af11e",
         "affectsGlobalScope": false
       },
+      "../node_modules/apollo-engine-reporting/dist/agent.d.ts": {
+        "version": "46443ae22544f40415c1939197f4382d1fa396b145496f44820d9a9ed27a2926",
+        "signature": "46443ae22544f40415c1939197f4382d1fa396b145496f44820d9a9ed27a2926",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts": {
+        "version": "be7ee4c1a8fbfe0d5e9c88fddcf298ca2e3a550f50501c0eeb2600824dbd0236",
+        "signature": "be7ee4c1a8fbfe0d5e9c88fddcf298ca2e3a550f50501c0eeb2600824dbd0236",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/apollo-engine-reporting/dist/index.d.ts": {
+        "version": "492f1057dce50ccc62693accc44caf47a5ea9b33b059db85a9540da4b55b9336",
+        "signature": "492f1057dce50ccc62693accc44caf47a5ea9b33b059db85a9540da4b55b9336",
+        "affectsGlobalScope": false
+      },
       "../node_modules/apollo-env/lib/polyfills/array.d.ts": {
         "version": "86abf2ee3ef84a8d40947efc8141596e7b071239c3649bbe05c3b7cbf4ff25aa",
         "signature": "86abf2ee3ef84a8d40947efc8141596e7b071239c3649bbe05c3b7cbf4ff25aa",
@@ -2541,49 +2571,9 @@
         "signature": "fdfa8b2285c4164e3bae08aaa475124d762016045148fdf3b780ba5d3dfbf11f",
         "affectsGlobalScope": false
       },
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts": {
-        "version": "fbc4c6e4e76c6f28907ed61931081e012e21cd4d9e071d37b933f41201ddb313",
-        "signature": "fbc4c6e4e76c6f28907ed61931081e012e21cd4d9e071d37b933f41201ddb313",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts": {
-        "version": "e542c82a0431b99b0a4a666f3e6266ba0275c62b6ea2caec022c08f883c34b10",
-        "signature": "e542c82a0431b99b0a4a666f3e6266ba0275c62b6ea2caec022c08f883c34b10",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts": {
-        "version": "3ebb609562247356837714d63dc48d609943c4830c6efd6ae55056a83d091f07",
-        "signature": "3ebb609562247356837714d63dc48d609943c4830c6efd6ae55056a83d091f07",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts": {
-        "version": "8090f097a78f10892007bfce1745f69e11dde0e8e45a5908331faa5e6bedc7bc",
-        "signature": "8090f097a78f10892007bfce1745f69e11dde0e8e45a5908331faa5e6bedc7bc",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts": {
-        "version": "cd7b4968685acfd6650b164d27820bf0847093bf8e4bd18078c38e075ca9cac4",
-        "signature": "cd7b4968685acfd6650b164d27820bf0847093bf8e4bd18078c38e075ca9cac4",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts": {
-        "version": "80b7b938d97638e02418c57708fc97519ebf48b9441025d659a2d2bbaf665da3",
-        "signature": "80b7b938d97638e02418c57708fc97519ebf48b9441025d659a2d2bbaf665da3",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts": {
-        "version": "27f2bf456385980a3ef693dae26ad114ee3e811951e6b5d0c08eefd8cc853f4f",
-        "signature": "27f2bf456385980a3ef693dae26ad114ee3e811951e6b5d0c08eefd8cc853f4f",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-core/dist/plugin/index.d.ts": {
-        "version": "7b967ccb2dc24441a09fbd1b12a82403ff4c10f59b730f6ce13a5bb652a02ee4",
-        "signature": "7b967ccb2dc24441a09fbd1b12a82403ff4c10f59b730f6ce13a5bb652a02ee4",
-        "affectsGlobalScope": false
-      },
       "../node_modules/apollo-server-core/dist/types.d.ts": {
-        "version": "393f3a5f47e637425beb36964f6041d735b2aac22223947340655d33bd44d53c",
-        "signature": "393f3a5f47e637425beb36964f6041d735b2aac22223947340655d33bd44d53c",
+        "version": "4a44b5fa48f1607f970b6ce413993a325cfbd7c983d389aa96f06d23ef67c3ee",
+        "signature": "4a44b5fa48f1607f970b6ce413993a325cfbd7c983d389aa96f06d23ef67c3ee",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/requestPipeline.d.ts": {
@@ -2592,13 +2582,18 @@
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/ApolloServer.d.ts": {
-        "version": "b1b12ae1e371b0013381cb643525a4c599e324c7870a57036afefbe3f23a6ba4",
-        "signature": "b1b12ae1e371b0013381cb643525a4c599e324c7870a57036afefbe3f23a6ba4",
+        "version": "fb0c55531c23bb66f87c132acdb9ab7ccd57912dc8d84e2503ebfccd5764ef25",
+        "signature": "fb0c55531c23bb66f87c132acdb9ab7ccd57912dc8d84e2503ebfccd5764ef25",
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts": {
         "version": "9e2f68d1b70625fada007266b5acd918c6e4f780bfe74791fc5b76d8f14c9fdd",
         "signature": "9e2f68d1b70625fada007266b5acd918c6e4f780bfe74791fc5b76d8f14c9fdd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/graphql-upload/node_modules/graphql/index.d.ts": {
+        "version": "b1d9d4c03b3c064dba84dee9e9db189cf3b20521df15e5fcef445a8963e8be83",
+        "signature": "b1d9d4c03b3c064dba84dee9e9db189cf3b20521df15e5fcef445a8963e8be83",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/range-parser/index.d.ts": {
@@ -2697,23 +2692,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/apollo-server-core/dist/index.d.ts": {
-        "version": "a7d73b8255abe01c21223bbd33d88405b12dd074f72978dc227a10b51b71ea90",
-        "signature": "a7d73b8255abe01c21223bbd33d88405b12dd074f72978dc227a10b51b71ea90",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting-protobuf/dist/protobuf.d.ts": {
-        "version": "7d55c8ddbe2668b8744e5a49e94cd5422af94509d796a0bb3c5b0cdb8a0efa5f",
-        "signature": "7d55c8ddbe2668b8744e5a49e94cd5422af94509d796a0bb3c5b0cdb8a0efa5f",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts": {
-        "version": "931278fdee439596382fb5783f955c70f5d7eae4369667b47cf89588fa470fd7",
-        "signature": "931278fdee439596382fb5783f955c70f5d7eae4369667b47cf89588fa470fd7",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-server-types/dist/index.d.ts": {
-        "version": "5a553979406dee2dba028437e87245d706fa0b5b9493b4a27182b32ae877dc5f",
-        "signature": "5a553979406dee2dba028437e87245d706fa0b5b9493b4a27182b32ae877dc5f",
+        "version": "afdd5e5c99b363597241670c999b5c637559e42e6ecceceba4aa277bb7943d66",
+        "signature": "afdd5e5c99b363597241670c999b5c637559e42e6ecceceba4aa277bb7943d66",
         "affectsGlobalScope": false
       },
       "../node_modules/@apollo/federation/dist/composition/types.d.ts": {
@@ -2873,86 +2853,6 @@
       },
       "../node_modules/@apollo/gateway/src/datasources/types.ts": {
         "version": "a60c9f01043a35226d902dc87596395e18837ca42529036507dc38bb41d21724",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts": {
-        "version": "66aae36538952c6916d2224dbf9bb1a2e00416b7abc45dcbbfe7a07b95ae069b",
-        "signature": "66aae36538952c6916d2224dbf9bb1a2e00416b7abc45dcbbfe7a07b95ae069b",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/graphql-tools/dist/index.d.ts": {
-        "version": "02d56ea773b997676c89b0c32e3c56633875a177c812259dee7e50deebecdf07",
-        "signature": "02d56ea773b997676c89b0c32e3c56633875a177c812259dee7e50deebecdf07",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts": {
-        "version": "79352df02a802fcd225db672144ab28697faff057b7a1646a57c69e5afd06ffc",
-        "signature": "79352df02a802fcd225db672144ab28697faff057b7a1646a57c69e5afd06ffc",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/runHttpQuery.d.ts": {
-        "version": "6dfac606e7035d4335da6b3f20b34726ad285f5b12b4c9cf4847c169c5a64093",
-        "signature": "6dfac606e7035d4335da6b3f20b34726ad285f5b12b4c9cf4847c169c5a64093",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts": {
-        "version": "b7c9455711b2561b07fb2ca15f292a55f9e6611616e7a678e8719ab036db0e31",
-        "signature": "b7c9455711b2561b07fb2ca15f292a55f9e6611616e7a678e8719ab036db0e31",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts": {
-        "version": "b3ff3134c67428f788a561c98b6a720eb6ed39fe21882c1ef941ca078af5cbb8",
-        "signature": "b3ff3134c67428f788a561c98b6a720eb6ed39fe21882c1ef941ca078af5cbb8",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting/node_modules/apollo-server-plugin-base/dist/index.d.ts": {
-        "version": "66aae36538952c6916d2224dbf9bb1a2e00416b7abc45dcbbfe7a07b95ae069b",
-        "signature": "66aae36538952c6916d2224dbf9bb1a2e00416b7abc45dcbbfe7a07b95ae069b",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting/dist/agent.d.ts": {
-        "version": "46443ae22544f40415c1939197f4382d1fa396b145496f44820d9a9ed27a2926",
-        "signature": "46443ae22544f40415c1939197f4382d1fa396b145496f44820d9a9ed27a2926",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts": {
-        "version": "be7ee4c1a8fbfe0d5e9c88fddcf298ca2e3a550f50501c0eeb2600824dbd0236",
-        "signature": "be7ee4c1a8fbfe0d5e9c88fddcf298ca2e3a550f50501c0eeb2600824dbd0236",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/apollo-engine-reporting/dist/index.d.ts": {
-        "version": "492f1057dce50ccc62693accc44caf47a5ea9b33b059db85a9540da4b55b9336",
-        "signature": "492f1057dce50ccc62693accc44caf47a5ea9b33b059db85a9540da4b55b9336",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/types.d.ts": {
-        "version": "4a44b5fa48f1607f970b6ce413993a325cfbd7c983d389aa96f06d23ef67c3ee",
-        "signature": "4a44b5fa48f1607f970b6ce413993a325cfbd7c983d389aa96f06d23ef67c3ee",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipeline.d.ts": {
-        "version": "9bbdaff9e13c980c2b5865d419324b05e92b11d7c2b8ec595f291e3e76ced199",
-        "signature": "9bbdaff9e13c980c2b5865d419324b05e92b11d7c2b8ec595f291e3e76ced199",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/ApolloServer.d.ts": {
-        "version": "fb0c55531c23bb66f87c132acdb9ab7ccd57912dc8d84e2503ebfccd5764ef25",
-        "signature": "fb0c55531c23bb66f87c132acdb9ab7ccd57912dc8d84e2503ebfccd5764ef25",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts": {
-        "version": "9e2f68d1b70625fada007266b5acd918c6e4f780bfe74791fc5b76d8f14c9fdd",
-        "signature": "9e2f68d1b70625fada007266b5acd918c6e4f780bfe74791fc5b76d8f14c9fdd",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/processFileUploads.d.ts": {
-        "version": "f7f734fc503f4bc2d4cb1c81461ac976b05340514a854eb5cb897fa2ebed2065",
-        "signature": "f7f734fc503f4bc2d4cb1c81461ac976b05340514a854eb5cb897fa2ebed2065",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/index.d.ts": {
-        "version": "afdd5e5c99b363597241670c999b5c637559e42e6ecceceba4aa277bb7943d66",
-        "signature": "afdd5e5c99b363597241670c999b5c637559e42e6ecceceba4aa277bb7943d66",
         "affectsGlobalScope": false
       },
       "../node_modules/@ts-morph/common/node_modules/typescript/lib/typescript.d.ts": {
@@ -3754,6 +3654,11 @@
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
+      },
+      "../node_modules/typeorm/node_modules/reflect-metadata/index.d.ts": {
+        "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
+        "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
+        "affectsGlobalScope": true
       },
       "../node_modules/typeorm/schema-builder/options/TableColumnOptions.d.ts": {
         "version": "222ebf19b1260582fd2023a65c5b7da77f730021f05afb9c4ead4b0b339a8c98",
@@ -5065,19 +4970,19 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
-      "../src/entity/questions.ts": {
-        "version": "f9271a6795896a3e45fe7d9b0d8bcf2a2ddc5be04c854d9fc3197952ab2cfb42",
-        "signature": "21427418b1c5faf080d741464504a60d986d41cfc7965592ab283fe3dfc0e0d7",
+      "../src/entity/account.ts": {
+        "version": "f0330f3f7c25653858da5e88ab607fdfbc65b7ec863aa262ec7d99309d1485cd",
+        "signature": "8b203ff2920ed0a7ad4b3d7e124e6ca31773617320d129118cb2a16702db67a6",
         "affectsGlobalScope": false
       },
       "../src/entity/survey.ts": {
-        "version": "55ef5814b703183f36be1c9d3063c47c613c0753902b62754ff70027ecfa651f",
-        "signature": "fb0f362416f1bc70a723d3a481b12c0febab5d3b9704219bde94293d31cb8a28",
+        "version": "9aba0e0c07c59562b45c8da8ac5ffe0f797205bcff4e3bee047bdbb8025a2d02",
+        "signature": "3442f6c4eca269134a866a66271c3380106c5afd2719eaa0423120cd387e132f",
         "affectsGlobalScope": false
       },
-      "../src/entity/account.ts": {
-        "version": "333e8b6708139e3be64691838df5254ab49ced2b3f59c78c96c895efadbb9e71",
-        "signature": "f5f35fbf96b80ff74290250c64af0d16be4f2e03e78d9ffaae1a79fc4ec2b5f2",
+      "../src/entity/questions.ts": {
+        "version": "0781fd42ea486f6a903d08f4f49661f09bf0d6fb4ff037450efb0159068e0795",
+        "signature": "633924560ccf850352ca6607a6df51a9314f9a0a2664509389bdda51694b2925",
         "affectsGlobalScope": false
       },
       "../src/repository/repository.service.ts": {
@@ -5091,23 +4996,28 @@
         "affectsGlobalScope": false
       },
       "../src/inputs/survey-input.ts": {
-        "version": "c2a20e68890ba8d4c3b04e121155edf647c770a48ede1092316e84970ddacd10",
-        "signature": "ef2d33b6ffd33bcbe0eab7e211e4de996875ef32234473cad69c97a04736cb27",
+        "version": "fea603ed3f45acfa509ece27c73c1ac5f1b2c2f8df2b36f7147e1d207edb2d37",
+        "signature": "71cca4c5b9a06a0ccf9fc951e6ec5837101a0ceedf4136d14111c6257997a74f",
         "affectsGlobalScope": false
       },
       "../src/inputs/account-input.ts": {
-        "version": "4a66daa406de48bfe373933e6a5b42b64795a41078f41ecf8a5d6103f133208e",
-        "signature": "9698f8e57b7b95ada070b07f2612d6c1af9d502413184d4bcce94f806a5c21e6",
+        "version": "5a9ed423414ce7dfbfe57e2ccf116fe59597d2fac3845feb30941cf1c786b161",
+        "signature": "e2d2c9759f2d1e6c8c047a6d6967888c25a36976c4362f4e93aa2384eaee2196",
+        "affectsGlobalScope": false
+      },
+      "../src/entity/response-storage/AccountManageStore.ts": {
+        "version": "46e7b14940394427c74e177f7a7e544e94b0104615f1b537d5db3f5e62b43ff2",
+        "signature": "ac175b1753f398d548cf072ff89d1e4ae382bd6ffe2d70e10c08291a65e01372",
         "affectsGlobalScope": false
       },
       "../src/account/account.service.ts": {
-        "version": "5167af68109aa487cbd4d5984e1da4d95d7f727bf7bb55a1442465cbc28499a3",
-        "signature": "bdbc19942cffc30252f0229046b40008da40b619959aef6ff034cf2e633932b2",
+        "version": "86e404c1411a3b03cc692d235b8ac786fc305f56e6a4bf5b6c18ee55b54145cb",
+        "signature": "ca4d4a423ad6b0fb5a7fc9d7a7fa1486d440ac73899ca3b3098a934402c6550c",
         "affectsGlobalScope": false
       },
       "../src/account/account.resolver.ts": {
-        "version": "81a4999176e0192ba0a361d73e31f536748f217374cee965a27880ca8b43a1e5",
-        "signature": "91292a1c67dff607482ca9ae04f5f441ec10aa7468030fcb081a9d72b37a3c32",
+        "version": "d574a4f6ff095b5e39fc84be02511c1ade0a1d80fb4fcafb03e844dca03a3e09",
+        "signature": "f6047d765990aaae47afee9adfe619560b16866f1ca3532913918f84f3c31d99",
         "affectsGlobalScope": false
       },
       "../src/account/account.module.ts": {
@@ -6429,7 +6339,7 @@
         "../node_modules/@nestjs/graphql/dist/graphql-types.loader.d.ts",
         "../node_modules/@nestjs/graphql/dist/graphql.factory.d.ts",
         "../node_modules/@nestjs/graphql/dist/interfaces/gql-module-options.interface.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/index.d.ts"
+        "../node_modules/apollo-server-core/dist/index.d.ts"
       ],
       "../node_modules/@nestjs/graphql/dist/index.d.ts": [
         "../node_modules/@nestjs/graphql/dist/decorators/index.d.ts",
@@ -6476,7 +6386,7 @@
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
         "../node_modules/@nestjs/graphql/dist/graphql-ast.explorer.d.ts",
         "../node_modules/@nestjs/graphql/dist/interfaces/build-schema-options.interface.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/index.d.ts",
+        "../node_modules/apollo-server-core/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@nestjs/graphql/dist/interfaces/index.d.ts": [
@@ -6784,96 +6694,6 @@
       "../node_modules/@nestjs/graphql/index.d.ts": [
         "../node_modules/@nestjs/graphql/dist/index.d.ts"
       ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/ApolloServer.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipeline.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/types.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/ws/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-cache-control/dist/index.d.ts",
-        "../node_modules/apollo-datasource/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/index.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/ApolloServer.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/processFileUploads.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/runHttpQuery.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/types.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/apollo-server-errors/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts": [
-        "../node_modules/@apollographql/graphql-playground-html/dist/render-playground-page.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/processFileUploads.d.ts": [
-        "../node_modules/@types/graphql-upload/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipeline.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-datasource/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts": [
-        "../node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/runHttpQuery.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/types.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/lib/index.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/@types/ws/index.d.ts",
-        "../node_modules/apollo-cache-control/dist/index.d.ts",
-        "../node_modules/apollo-engine-reporting/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts",
-        "../node_modules/subscriptions-transport-ws/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts": [
-        "../node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/graphql-tools/dist/index.d.ts": [
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/Interfaces.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/makeExecutableSchema.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/mock.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/schemaVisitor.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/stitching/index.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/transforms/index.d.ts"
-      ],
       "../node_modules/@nestjs/typeorm/dist/common/index.d.ts": [
         "../node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts",
         "../node_modules/@nestjs/typeorm/dist/common/typeorm.utils.d.ts"
@@ -6983,6 +6803,17 @@
         "../node_modules/@types/koa/index.d.ts",
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@types/graphql-upload/node_modules/graphql/index.d.ts": [
+        "../node_modules/graphql/error/index.d.ts",
+        "../node_modules/graphql/execution/index.d.ts",
+        "../node_modules/graphql/graphql.d.ts",
+        "../node_modules/graphql/language/index.d.ts",
+        "../node_modules/graphql/subscription/index.d.ts",
+        "../node_modules/graphql/type/index.d.ts",
+        "../node_modules/graphql/utilities/index.d.ts",
+        "../node_modules/graphql/validation/index.d.ts",
+        "../node_modules/graphql/version.d.ts"
       ],
       "../node_modules/@types/istanbul-lib-report/index.d.ts": [
         "../node_modules/@types/istanbul-lib-coverage/index.d.ts"
@@ -7305,11 +7136,20 @@
       ],
       "../node_modules/apollo-cache-control/dist/index.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolveObject.d.ts",
+        "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-graphql/lib/schema/resolveObject.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts",
         "../node_modules/graphql/type/definition.d.ts"
+      ],
+      "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts": [
+        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
+      ],
+      "../node_modules/apollo-cache-control/node_modules/apollo-server-types/dist/index.d.ts": [
+        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
+        "../node_modules/apollo-server-caching/dist/index.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-datasource/dist/index.d.ts": [
         "../node_modules/apollo-server-caching/dist/index.d.ts"
@@ -7322,22 +7162,19 @@
         "../node_modules/@types/long/index.d.ts"
       ],
       "../node_modules/apollo-engine-reporting/dist/agent.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-engine-reporting/dist/agent.d.ts"
+        "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts"
       ],
       "../node_modules/apollo-engine-reporting/dist/index.d.ts": [
         "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
         "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts"
-      ],
-      "../node_modules/apollo-engine-reporting/node_modules/apollo-server-plugin-base/dist/index.d.ts": [
-        "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-env/lib/fetch/fetch.d.ts": [
         "../node_modules/@types/node/http.d.ts",
@@ -7453,8 +7290,6 @@
       ],
       "../node_modules/apollo-server-core/dist/ApolloServer.d.ts": [
         "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/http2.d.ts",
-        "../node_modules/@types/node/https.d.ts",
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/ws/index.d.ts",
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
@@ -7462,7 +7297,7 @@
         "../node_modules/apollo-server-core/dist/requestPipeline.d.ts",
         "../node_modules/apollo-server-core/dist/types.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts": [
@@ -7471,8 +7306,8 @@
         "../node_modules/apollo-server-caching/dist/index.d.ts",
         "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/index.d.ts": [
@@ -7480,7 +7315,6 @@
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts",
         "../node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
         "../node_modules/apollo-server-core/dist/processFileUploads.d.ts",
         "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts",
         "../node_modules/apollo-server-core/dist/runHttpQuery.d.ts",
@@ -7497,46 +7331,6 @@
       "../node_modules/apollo-server-core/dist/playground.d.ts": [
         "../node_modules/@apollographql/graphql-playground-html/dist/render-playground-page.d.ts"
       ],
-      "../node_modules/apollo-server-core/dist/plugin/index.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts": [
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts": [
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts"
-      ],
       "../node_modules/apollo-server-core/dist/processFileUploads.d.ts": [
         "../node_modules/@types/graphql-upload/index.d.ts"
       ],
@@ -7546,38 +7340,32 @@
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
+        "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/runHttpQuery.d.ts": [
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
+        "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/types.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/index.d.ts",
         "../node_modules/@types/ws/index.d.ts",
         "../node_modules/apollo-cache-control/dist/index.d.ts",
+        "../node_modules/apollo-engine-reporting/dist/index.d.ts",
         "../node_modules/apollo-server-caching/dist/index.d.ts",
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
         "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts",
         "../node_modules/subscriptions-transport-ws/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/Interfaces.d.ts": [
         "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/schemaVisitor.d.ts",
@@ -7784,13 +7572,7 @@
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-plugin-base/dist/index.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-server-plugin-base/node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
+        "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-server-types/dist/index.d.ts": [
         "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
@@ -9736,9 +9518,11 @@
       ],
       "../src/account/account.resolver.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
         "../src/account/account.service.ts",
         "../src/entity/account.ts",
         "../src/entity/questions.ts",
+        "../src/entity/response-storage/AccountManageStore.ts",
         "../src/entity/survey.ts",
         "../src/inputs/account-input.ts",
         "../src/inputs/question-inputs.ts",
@@ -9746,9 +9530,11 @@
       ],
       "../src/account/account.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/repl.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/entity/account.ts",
         "../src/entity/questions.ts",
+        "../src/entity/response-storage/AccountManageStore.ts",
         "../src/entity/survey.ts",
         "../src/inputs/account-input.ts",
         "../src/inputs/question-inputs.ts",
@@ -9773,15 +9559,23 @@
       ],
       "../src/entity/account.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
-        "../node_modules/typeorm/index.d.ts"
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entity/survey.ts"
       ],
       "../src/entity/questions.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
-        "../node_modules/typeorm/index.d.ts"
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entity/survey.ts"
+      ],
+      "../src/entity/response-storage/AccountManageStore.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../src/entity/account.ts"
       ],
       "../src/entity/survey.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
-        "../node_modules/typeorm/index.d.ts"
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entity/account.ts",
+        "../src/entity/questions.ts"
       ],
       "../src/inputs/account-input.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts"
@@ -10816,7 +10610,7 @@
         "../node_modules/@nestjs/graphql/dist/graphql-types.loader.d.ts",
         "../node_modules/@nestjs/graphql/dist/graphql.factory.d.ts",
         "../node_modules/@nestjs/graphql/dist/interfaces/gql-module-options.interface.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/index.d.ts"
+        "../node_modules/apollo-server-core/dist/index.d.ts"
       ],
       "../node_modules/@nestjs/graphql/dist/index.d.ts": [
         "../node_modules/@nestjs/graphql/dist/decorators/index.d.ts",
@@ -10863,7 +10657,7 @@
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
         "../node_modules/@nestjs/graphql/dist/graphql-ast.explorer.d.ts",
         "../node_modules/@nestjs/graphql/dist/interfaces/build-schema-options.interface.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/index.d.ts",
+        "../node_modules/apollo-server-core/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/@nestjs/graphql/dist/interfaces/index.d.ts": [
@@ -11171,96 +10965,6 @@
       "../node_modules/@nestjs/graphql/index.d.ts": [
         "../node_modules/@nestjs/graphql/dist/index.d.ts"
       ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/ApolloServer.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipeline.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/types.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/@types/ws/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-cache-control/dist/index.d.ts",
-        "../node_modules/apollo-datasource/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/index.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/ApolloServer.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/processFileUploads.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/runHttpQuery.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/types.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/apollo-server-errors/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts": [
-        "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts": [
-        "../node_modules/@apollographql/graphql-playground-html/dist/render-playground-page.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/processFileUploads.d.ts": [
-        "../node_modules/@types/graphql-upload/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipeline.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-datasource/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts": [
-        "../node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/runHttpQuery.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/types.d.ts": [
-        "../node_modules/@apollographql/apollo-tools/lib/index.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/@types/ws/index.d.ts",
-        "../node_modules/apollo-cache-control/dist/index.d.ts",
-        "../node_modules/apollo-engine-reporting/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts",
-        "../node_modules/subscriptions-transport-ws/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts": [
-        "../node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/graphql/node_modules/graphql-tools/dist/index.d.ts": [
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/Interfaces.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/makeExecutableSchema.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/mock.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/schemaVisitor.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/stitching/index.d.ts",
-        "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/transforms/index.d.ts"
-      ],
       "../node_modules/@nestjs/typeorm/dist/common/index.d.ts": [
         "../node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts",
         "../node_modules/@nestjs/typeorm/dist/common/typeorm.utils.d.ts"
@@ -11370,6 +11074,17 @@
         "../node_modules/@types/koa/index.d.ts",
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/graphql/index.d.ts"
+      ],
+      "../node_modules/@types/graphql-upload/node_modules/graphql/index.d.ts": [
+        "../node_modules/graphql/error/index.d.ts",
+        "../node_modules/graphql/execution/index.d.ts",
+        "../node_modules/graphql/graphql.d.ts",
+        "../node_modules/graphql/language/index.d.ts",
+        "../node_modules/graphql/subscription/index.d.ts",
+        "../node_modules/graphql/type/index.d.ts",
+        "../node_modules/graphql/utilities/index.d.ts",
+        "../node_modules/graphql/validation/index.d.ts",
+        "../node_modules/graphql/version.d.ts"
       ],
       "../node_modules/@types/istanbul-lib-report/index.d.ts": [
         "../node_modules/@types/istanbul-lib-coverage/index.d.ts"
@@ -11692,11 +11407,20 @@
       ],
       "../node_modules/apollo-cache-control/dist/index.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/schema/resolveObject.d.ts",
+        "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-graphql/lib/schema/resolveObject.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts",
         "../node_modules/graphql/type/definition.d.ts"
+      ],
+      "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts": [
+        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
+      ],
+      "../node_modules/apollo-cache-control/node_modules/apollo-server-types/dist/index.d.ts": [
+        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
+        "../node_modules/apollo-server-caching/dist/index.d.ts",
+        "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-datasource/dist/index.d.ts": [
         "../node_modules/apollo-server-caching/dist/index.d.ts"
@@ -11709,22 +11433,19 @@
         "../node_modules/@types/long/index.d.ts"
       ],
       "../node_modules/apollo-engine-reporting/dist/agent.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
         "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts": [
-        "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/apollo-engine-reporting/dist/agent.d.ts"
+        "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
+        "../node_modules/apollo-server-plugin-base/dist/index.d.ts"
       ],
       "../node_modules/apollo-engine-reporting/dist/index.d.ts": [
         "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
         "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts"
-      ],
-      "../node_modules/apollo-engine-reporting/node_modules/apollo-server-plugin-base/dist/index.d.ts": [
-        "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-env/lib/fetch/fetch.d.ts": [
         "../node_modules/@types/node/http.d.ts",
@@ -11840,8 +11561,6 @@
       ],
       "../node_modules/apollo-server-core/dist/ApolloServer.d.ts": [
         "../node_modules/@types/node/http.d.ts",
-        "../node_modules/@types/node/http2.d.ts",
-        "../node_modules/@types/node/https.d.ts",
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/ws/index.d.ts",
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
@@ -11849,7 +11568,7 @@
         "../node_modules/apollo-server-core/dist/requestPipeline.d.ts",
         "../node_modules/apollo-server-core/dist/types.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts": [
@@ -11858,8 +11577,8 @@
         "../node_modules/apollo-server-caching/dist/index.d.ts",
         "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/index.d.ts": [
@@ -11867,7 +11586,6 @@
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts",
         "../node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
         "../node_modules/apollo-server-core/dist/processFileUploads.d.ts",
         "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts",
         "../node_modules/apollo-server-core/dist/runHttpQuery.d.ts",
@@ -11884,46 +11602,6 @@
       "../node_modules/apollo-server-core/dist/playground.d.ts": [
         "../node_modules/@apollographql/graphql-playground-html/dist/render-playground-page.d.ts"
       ],
-      "../node_modules/apollo-server-core/dist/plugin/index.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts": [
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts": [
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts": [
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts"
-      ],
       "../node_modules/apollo-server-core/dist/processFileUploads.d.ts": [
         "../node_modules/@types/graphql-upload/index.d.ts"
       ],
@@ -11933,38 +11611,32 @@
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
+        "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/runHttpQuery.d.ts": [
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
+        "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-server-core/dist/types.d.ts": [
         "../node_modules/@apollographql/apollo-tools/lib/index.d.ts",
         "../node_modules/@types/ws/index.d.ts",
         "../node_modules/apollo-cache-control/dist/index.d.ts",
+        "../node_modules/apollo-engine-reporting/dist/index.d.ts",
         "../node_modules/apollo-server-caching/dist/index.d.ts",
         "../node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
         "../node_modules/apollo-server-core/dist/playground.d.ts",
-        "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
         "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/index.d.ts",
         "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
+        "../node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql-extensions/dist/index.d.ts",
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts",
         "../node_modules/graphql/index.d.ts",
         "../node_modules/subscriptions-transport-ws/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-server-core/node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/Interfaces.d.ts": [
         "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/schemaVisitor.d.ts",
@@ -12171,13 +11843,7 @@
         "../node_modules/graphql/index.d.ts"
       ],
       "../node_modules/apollo-server-plugin-base/dist/index.d.ts": [
-        "../node_modules/graphql-extensions/node_modules/apollo-server-types/dist/index.d.ts"
-      ],
-      "../node_modules/apollo-server-plugin-base/node_modules/apollo-server-types/dist/index.d.ts": [
-        "../node_modules/apollo-reporting-protobuf/dist/index.d.ts",
-        "../node_modules/apollo-server-caching/dist/index.d.ts",
-        "../node_modules/apollo-server-env/dist/index.d.ts",
-        "../node_modules/graphql/index.d.ts"
+        "../node_modules/apollo-server-types/dist/index.d.ts"
       ],
       "../node_modules/apollo-server-types/dist/index.d.ts": [
         "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
@@ -14115,6 +13781,7 @@
         "../src/account/account.service.ts",
         "../src/entity/account.ts",
         "../src/entity/questions.ts",
+        "../src/entity/response-storage/AccountManageStore.ts",
         "../src/entity/survey.ts",
         "../src/inputs/account-input.ts",
         "../src/inputs/question-inputs.ts",
@@ -14123,6 +13790,7 @@
       "../src/account/account.service.ts": [
         "../src/entity/account.ts",
         "../src/entity/questions.ts",
+        "../src/entity/response-storage/AccountManageStore.ts",
         "../src/entity/survey.ts",
         "../src/inputs/account-input.ts",
         "../src/inputs/question-inputs.ts",
@@ -14131,6 +13799,22 @@
       ],
       "../src/app.controller.ts": [
         "../src/app.service.ts"
+      ],
+      "../src/entity/account.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entity/survey.ts"
+      ],
+      "../src/entity/questions.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entity/survey.ts"
+      ],
+      "../src/entity/response-storage/AccountManageStore.ts": [
+        "../src/entity/account.ts"
+      ],
+      "../src/entity/survey.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entity/account.ts",
+        "../src/entity/questions.ts"
       ],
       "../src/repository/repository.service.ts": [
         "../node_modules/typeorm/index.d.ts",
@@ -14472,18 +14156,6 @@
       "../node_modules/@nestjs/graphql/dist/type-helpers/partial-type.helper.d.ts",
       "../node_modules/@nestjs/graphql/dist/type-helpers/pick-type.helper.d.ts",
       "../node_modules/@nestjs/graphql/index.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/ApolloServer.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/graphqlOptions.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/index.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/playground.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/processFileUploads.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipeline.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/runHttpQuery.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-core/dist/types.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/apollo-server-plugin-base/dist/index.d.ts",
-      "../node_modules/@nestjs/graphql/node_modules/graphql-tools/dist/index.d.ts",
       "../node_modules/@nestjs/typeorm/dist/common/index.d.ts",
       "../node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts",
       "../node_modules/@nestjs/typeorm/dist/common/typeorm.utils.d.ts",
@@ -14514,6 +14186,7 @@
       "../node_modules/@types/fs-capacitor/index.d.ts",
       "../node_modules/@types/graceful-fs/index.d.ts",
       "../node_modules/@types/graphql-upload/index.d.ts",
+      "../node_modules/@types/graphql-upload/node_modules/graphql/index.d.ts",
       "../node_modules/@types/http-assert/index.d.ts",
       "../node_modules/@types/http-errors/index.d.ts",
       "../node_modules/@types/istanbul-lib-coverage/index.d.ts",
@@ -14612,13 +14285,14 @@
       "../node_modules/@types/zen-observable/index.d.ts",
       "../node_modules/@wry/equality/lib/equality.d.ts",
       "../node_modules/apollo-cache-control/dist/index.d.ts",
+      "../node_modules/apollo-cache-control/node_modules/apollo-server-plugin-base/dist/index.d.ts",
+      "../node_modules/apollo-cache-control/node_modules/apollo-server-types/dist/index.d.ts",
       "../node_modules/apollo-datasource/dist/index.d.ts",
       "../node_modules/apollo-engine-reporting-protobuf/dist/index.d.ts",
       "../node_modules/apollo-engine-reporting-protobuf/dist/protobuf.d.ts",
       "../node_modules/apollo-engine-reporting/dist/agent.d.ts",
       "../node_modules/apollo-engine-reporting/dist/federatedPlugin.d.ts",
       "../node_modules/apollo-engine-reporting/dist/index.d.ts",
-      "../node_modules/apollo-engine-reporting/node_modules/apollo-server-plugin-base/dist/index.d.ts",
       "../node_modules/apollo-env/lib/fetch/fetch.d.ts",
       "../node_modules/apollo-env/lib/fetch/index.d.ts",
       "../node_modules/apollo-env/lib/fetch/url.d.ts",
@@ -14657,20 +14331,11 @@
       "../node_modules/apollo-server-core/dist/index.d.ts",
       "../node_modules/apollo-server-core/dist/nodeHttpToRequest.d.ts",
       "../node_modules/apollo-server-core/dist/playground.d.ts",
-      "../node_modules/apollo-server-core/dist/plugin/index.d.ts",
-      "../node_modules/apollo-server-core/dist/plugin/inlineTrace/index.d.ts",
-      "../node_modules/apollo-server-core/dist/plugin/internalPlugin.d.ts",
-      "../node_modules/apollo-server-core/dist/plugin/schemaReporting/index.d.ts",
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/index.d.ts",
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/legacyOptions.d.ts",
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/options.d.ts",
-      "../node_modules/apollo-server-core/dist/plugin/usageReporting/plugin.d.ts",
       "../node_modules/apollo-server-core/dist/processFileUploads.d.ts",
       "../node_modules/apollo-server-core/dist/requestPipeline.d.ts",
       "../node_modules/apollo-server-core/dist/requestPipelineAPI.d.ts",
       "../node_modules/apollo-server-core/dist/runHttpQuery.d.ts",
       "../node_modules/apollo-server-core/dist/types.d.ts",
-      "../node_modules/apollo-server-core/node_modules/apollo-server-types/dist/index.d.ts",
       "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/Interfaces.d.ts",
       "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/generate/SchemaError.d.ts",
       "../node_modules/apollo-server-core/node_modules/graphql-tools/dist/generate/addResolveFunctionsToSchema.d.ts",
@@ -14719,7 +14384,6 @@
       "../node_modules/apollo-server-env/dist/url.d.ts",
       "../node_modules/apollo-server-errors/dist/index.d.ts",
       "../node_modules/apollo-server-plugin-base/dist/index.d.ts",
-      "../node_modules/apollo-server-plugin-base/node_modules/apollo-server-types/dist/index.d.ts",
       "../node_modules/apollo-server-types/dist/index.d.ts",
       "../node_modules/apollo-utilities/lib/directives.d.ts",
       "../node_modules/apollo-utilities/lib/fragments.d.ts",
@@ -15113,6 +14777,7 @@
       "../node_modules/typeorm/migration/MigrationInterface.d.ts",
       "../node_modules/typeorm/naming-strategy/DefaultNamingStrategy.d.ts",
       "../node_modules/typeorm/naming-strategy/NamingStrategyInterface.d.ts",
+      "../node_modules/typeorm/node_modules/reflect-metadata/index.d.ts",
       "../node_modules/typeorm/platform/PlatformTools.d.ts",
       "../node_modules/typeorm/query-builder/Alias.d.ts",
       "../node_modules/typeorm/query-builder/Brackets.d.ts",
@@ -15214,6 +14879,7 @@
       "../src/app.service.ts",
       "../src/entity/account.ts",
       "../src/entity/questions.ts",
+      "../src/entity/response-storage/AccountManageStore.ts",
       "../src/entity/survey.ts",
       "../src/inputs/account-input.ts",
       "../src/inputs/question-inputs.ts",

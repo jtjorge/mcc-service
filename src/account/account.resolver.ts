@@ -6,6 +6,8 @@ import { AccountService } from "./account.service";
 import { AccountInput } from 'src/inputs/account-input';
 import { SurveyModel } from 'src/entity/survey';
 import { SurveyInput } from 'src/inputs/survey-input';
+import { Any } from 'typeorm';
+import { AccountManageStore } from 'src/entity/response-storage/AccountManageStore';
 
 @Resolver()
 export class AccountResolver{
@@ -18,12 +20,12 @@ export class AccountResolver{
        return await this.accountService.findAll(take,skip);
     }
 
-    @Query(() => [AccountModel], {nullable:true})
+    @Query(() =>  AccountManageStore, {nullable:true})
     async getAllManagedAccounts(
         @Args('take', { type: () => Int }) take: number,
         @Args('skip', { type: () => Int }) skip: number,
         @Args('user_level', { type: () => String }) user_level: string,
-        @Args('keyword', { nullable:true}) keyword: string,) {
+        @Args('keyword', { nullable:true}) keyword: string): Promise<AccountManageStore> {
        return await this.accountService.findAllManagedAccounts(take,skip,user_level,keyword);
     }
 
@@ -38,10 +40,9 @@ export class AccountResolver{
     }
 
     @Query(() => [SurveyModel], {nullable:true})
-    async getAllSurvey(
-        @Args('take', { type: () => Int }) take: number,
-        @Args('skip', { type: () => Int }) skip: number,) {
-       return await this.accountService.findAll(take,skip);
+    async getAllSurvey(@Args('level', { type: () => Int }) level: number,
+                      @Args('uniqueNumber', { type: () => String }) uniqueNumber: string): Promise<SurveyModel[]>{
+       return await this.accountService.getAllSurvey(level,uniqueNumber);
     }
     @Query(()=> AccountModel, {nullable: true})
     async getCredentials(

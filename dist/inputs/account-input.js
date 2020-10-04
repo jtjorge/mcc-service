@@ -15,7 +15,7 @@ let AccountInput = class AccountInput {
 };
 __decorate([
     graphql_1.Field({ nullable: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], AccountInput.prototype, "id", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
@@ -53,6 +53,10 @@ __decorate([
     graphql_1.Field({ nullable: true }),
     __metadata("design:type", Date)
 ], AccountInput.prototype, "date_created", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    __metadata("design:type", Date)
+], AccountInput.prototype, "updated_date", void 0);
 AccountInput = __decorate([
     graphql_1.InputType()
 ], AccountInput);

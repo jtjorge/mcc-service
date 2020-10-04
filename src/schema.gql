@@ -2,33 +2,8 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type QuestionsModel {
-  id: Float!
-  level: Float!
-  question: String!
-  created_date: DateTime!
-}
-
-"""
-A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
-"""
-scalar DateTime
-
-type SurveyModel {
-  id: Float!
-  level: String
-  answer: String
-  question_id: String
-  account_id: String
-  other_sickness: String
-  temperature: String
-  agreement: String
-  account_type: String
-  date_created: DateTime
-}
-
 type AccountModel {
-  id: Float!
+  id: String!
   username: String
   password: String
   name: String
@@ -38,13 +13,49 @@ type AccountModel {
   age: String
   user_level: String
   date_created: DateTime
+  updated_date: DateTime
+  accountSurvey: [SurveyModel!]
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type SurveyModel {
+  id: String!
+  level: String
+  answer: String
+  question_id: String
+  account_id: String
+  other_sickness: String
+  temperature: String
+  agreement: String
+  account_type: String
+  identifier: String
+  date_created: DateTime
+  accountModel: [AccountModel!]
+  questionModel: [QuestionsModel!]
+}
+
+type QuestionsModel {
+  id: Float!
+  level: Float!
+  question: String!
+  created_date: DateTime!
+  questionSurvey: [SurveyModel!]
+}
+
+type AccountManageStore {
+  data: [AccountModel!]
+  count: Float
 }
 
 type Query {
   getAllAccounts(skip: Int!, take: Int!): [AccountModel!]
-  getAllManagedAccounts(keyword: String, user_level: String!, skip: Int!, take: Int!): [AccountModel!]
+  getAllManagedAccounts(keyword: String, user_level: String!, skip: Int!, take: Int!): AccountManageStore
   getDistinctAccount: [AccountModel!]
-  getAllSurvey(skip: Int!, take: Int!): [SurveyModel!]
+  getAllSurvey(uniqueNumber: String!, level: Int!): [SurveyModel!]
   getCredentials(password: String!, username: String!): AccountModel
   getAllQuestions(skip: Int!, take: Int!): [QuestionsModel!]
 }
@@ -56,7 +67,7 @@ type Mutation {
 }
 
 input AccountInput {
-  id: Float
+  id: String
   username: String
   password: String
   name: String
@@ -66,10 +77,11 @@ input AccountInput {
   age: String
   user_level: String
   date_created: DateTime
+  updated_date: DateTime
 }
 
 input SurveyInput {
-  id: Float
+  id: String
   level: String
   answer: String
   question_id: String
@@ -78,6 +90,7 @@ input SurveyInput {
   temperature: String
   agreement: String
   account_type: String
+  identifier: String
   date_created: DateTime
 }
 

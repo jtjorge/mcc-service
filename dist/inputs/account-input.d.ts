@@ -1,5 +1,5 @@
 export declare class AccountInput {
-    id: number;
+    id: string;
     username: string;
     password: string;
     name: string;
@@ -9,4 +9,5 @@ export declare class AccountInput {
     age: string;
     user_level: string;
     date_created: Date;
+    updated_date: Date;
 }

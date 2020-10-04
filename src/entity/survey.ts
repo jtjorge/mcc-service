@@ -1,13 +1,15 @@
-import { Field, ObjectType } from '@nestjs/graphql';
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import { AccountModel } from 'src/entity/account';
+import { Field, ID, ObjectType } from '@nestjs/graphql';
+import {BaseEntity, Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import { QuestionsModel } from './questions';
 
 @ObjectType()
-@Entity({name: 'tbl_survey'})
-export class SurveyModel {
+@Entity({name: "tbl_survey"})
+export class SurveyModel extends BaseEntity{
 
     @Field({nullable: false})
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryGeneratedColumn('uuid')
+    id: string;
 
     @Field({nullable: true})
     @Column()
@@ -40,9 +42,22 @@ export class SurveyModel {
 
     @Field({nullable: true})
     @Column()
-    account_type: string;   
+    account_type: string;
+    
+    @Field({nullable: true})
+    @Column()
+    identifier: string; 
 
     @Field({nullable: true})
     @Column()
     date_created: Date;   
+
+    @Field(() => [AccountModel], { nullable: true })
+    @OneToMany(() => AccountModel, accountModel => accountModel.accountSurvey)
+    accountModel?: Promise<AccountModel>
+
+    
+    @Field(() => [QuestionsModel], { nullable: true })
+    @OneToMany(() => QuestionsModel, questionModel => questionModel.questionSurvey)
+    questionModel?: Promise<QuestionsModel[]>
 }

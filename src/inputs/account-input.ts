@@ -4,7 +4,7 @@ import { Field, ID, InputType } from "@nestjs/graphql";
 export class AccountInput {
 
     @Field({nullable: true })
-    id: number;
+    id: string;
 
     @Field({nullable: true})
     username: string;
@@ -32,4 +32,7 @@ export class AccountInput {
 
     @Field({nullable: true})
     date_created: Date;
+
+    @Field({nullable: true})
+    updated_date: Date;
 }

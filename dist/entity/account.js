@@ -10,14 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountModel = void 0;
+const survey_1 = require("./survey");
 const graphql_1 = require("@nestjs/graphql");
 const typeorm_1 = require("typeorm");
-let AccountModel = class AccountModel {
+let AccountModel = class AccountModel extends typeorm_1.BaseEntity {
 };
 __decorate([
     graphql_1.Field({ nullable: false }),
-    typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
+    typeorm_1.PrimaryGeneratedColumn('uuid'),
+    __metadata("design:type", String)
 ], AccountModel.prototype, "id", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
@@ -64,6 +65,17 @@ __decorate([
     typeorm_1.Column(),
     __metadata("design:type", Date)
 ], AccountModel.prototype, "date_created", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    typeorm_1.Column(),
+    __metadata("design:type", Date)
+], AccountModel.prototype, "updated_date", void 0);
+__decorate([
+    graphql_1.Field(() => [survey_1.SurveyModel], { nullable: true }),
+    typeorm_1.ManyToOne(() => survey_1.SurveyModel, surveyModel => surveyModel.accountModel),
+    typeorm_1.JoinColumn({ name: 'id', referencedColumnName: 'account_id' }),
+    __metadata("design:type", Promise)
+], AccountModel.prototype, "accountSurvey", void 0);
 AccountModel = __decorate([
     graphql_1.ObjectType(),
     typeorm_1.Entity({ name: "tbl_account" })

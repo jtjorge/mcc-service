@@ -10,9 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.QuestionsModel = void 0;
+const survey_1 = require("./survey");
 const graphql_1 = require("@nestjs/graphql");
 const typeorm_1 = require("typeorm");
-let QuestionsModel = class QuestionsModel {
+let QuestionsModel = class QuestionsModel extends typeorm_1.BaseEntity {
 };
 __decorate([
     graphql_1.Field({ nullable: false }),
@@ -34,9 +35,15 @@ __decorate([
     typeorm_1.Column(),
     __metadata("design:type", Date)
 ], QuestionsModel.prototype, "created_date", void 0);
+__decorate([
+    graphql_1.Field(() => [survey_1.SurveyModel], { nullable: true }),
+    typeorm_1.ManyToOne(() => survey_1.SurveyModel, surveyModel => surveyModel.questionModel),
+    typeorm_1.JoinColumn({ name: 'id', referencedColumnName: 'question_id' }),
+    __metadata("design:type", Promise)
+], QuestionsModel.prototype, "questionSurvey", void 0);
 QuestionsModel = __decorate([
     graphql_1.ObjectType(),
-    typeorm_1.Entity({ name: 'tbl_question' })
+    typeorm_1.Entity({ name: "tbl_question" })
 ], QuestionsModel);
 exports.QuestionsModel = QuestionsModel;
 //# sourceMappingURL=questions.js.map

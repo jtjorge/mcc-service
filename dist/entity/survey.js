@@ -10,14 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SurveyModel = void 0;
+const account_1 = require("./account");
 const graphql_1 = require("@nestjs/graphql");
 const typeorm_1 = require("typeorm");
-let SurveyModel = class SurveyModel {
+const questions_1 = require("./questions");
+let SurveyModel = class SurveyModel extends typeorm_1.BaseEntity {
 };
 __decorate([
     graphql_1.Field({ nullable: false }),
-    typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
+    typeorm_1.PrimaryGeneratedColumn('uuid'),
+    __metadata("design:type", String)
 ], SurveyModel.prototype, "id", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
@@ -62,11 +64,26 @@ __decorate([
 __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
+    __metadata("design:type", String)
+], SurveyModel.prototype, "identifier", void 0);
+__decorate([
+    graphql_1.Field({ nullable: true }),
+    typeorm_1.Column(),
     __metadata("design:type", Date)
 ], SurveyModel.prototype, "date_created", void 0);
+__decorate([
+    graphql_1.Field(() => [account_1.AccountModel], { nullable: true }),
+    typeorm_1.OneToMany(() => account_1.AccountModel, accountModel => accountModel.accountSurvey),
+    __metadata("design:type", Promise)
+], SurveyModel.prototype, "accountModel", void 0);
+__decorate([
+    graphql_1.Field(() => [questions_1.QuestionsModel], { nullable: true }),
+    typeorm_1.OneToMany(() => questions_1.QuestionsModel, questionModel => questionModel.questionSurvey),
+    __metadata("design:type", Promise)
+], SurveyModel.prototype, "questionModel", void 0);
 SurveyModel = __decorate([
     graphql_1.ObjectType(),
-    typeorm_1.Entity({ name: 'tbl_survey' })
+    typeorm_1.Entity({ name: "tbl_survey" })
 ], SurveyModel);
 exports.SurveyModel = SurveyModel;
 //# sourceMappingURL=survey.js.map

@@ -1,5 +1,5 @@
 export declare class SurveyInput {
-    id: number;
+    id: string;
     level: string;
     answer: string;
     question_id: string;
@@ -8,5 +8,6 @@ export declare class SurveyInput {
     temperature: string;
     agreement: string;
     account_type: string;
+    identifier: string;
     date_created: Date;
 }

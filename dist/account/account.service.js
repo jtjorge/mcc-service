@@ -16,6 +16,8 @@ const account_1 = require("../entity/account");
 const common_1 = require("@nestjs/common");
 const repository_service_1 = require("../repository/repository.service");
 const account_input_1 = require("../inputs/account-input");
+const typeorm_1 = require("typeorm");
+const AccountManageStore_1 = require("../entity/response-storage/AccountManageStore");
 let AccountService = class AccountService {
     constructor(repositoryService) {
         this.repositoryService = repositoryService;
@@ -23,14 +25,74 @@ let AccountService = class AccountService {
     async findAll(take, skip) {
         return await this.repositoryService.accountModel.find({ take: take, skip: skip });
     }
+    async getAllSurvey(level, uniqueNumber) {
+        if (level != 0) {
+            return await this.repositoryService.surveyModel.find({
+                order: {
+                    date_created: 'DESC'
+                },
+                where: {
+                    level: level
+                }
+            });
+        }
+        else if (uniqueNumber !== 'undefined' && 'null') {
+            const yesterday = (d => new Date(d.setDate(d.getDate() - 1)))(new Date);
+            return await this.repositoryService.surveyModel.find({
+                order: {
+                    date_created: 'DESC'
+                },
+                where: {
+                    identifier: uniqueNumber,
+                    date_created: typeorm_1.MoreThan(yesterday)
+                }
+            });
+        }
+        else {
+            return await this.repositoryService.surveyModel.find({
+                order: {
+                    date_created: 'DESC'
+                }
+            });
+        }
+    }
     async findAllManagedAccounts(take, skip, user_level, keyword) {
-        return await this.repositoryService.accountModel.find({
-            where: {
-                user_level,
-            },
-            take: take,
-            skip: skip
-        });
+        if (keyword != 'undefined' && keyword != 'null') {
+            const [result, total] = await this.repositoryService.accountModel.findAndCount({
+                where: {
+                    name: typeorm_1.Like(`%${keyword}%`),
+                    user_level: user_level,
+                },
+                order: {
+                    date_created: 'DESC'
+                },
+                take: take,
+                skip: skip
+            });
+            const getDataAndCount = {
+                data: result,
+                count: total
+            };
+            return getDataAndCount;
+        }
+        else {
+            const [result, total] = await this.repositoryService.accountModel.findAndCount({
+                where: {
+                    user_level: user_level
+                },
+                order: {
+                    date_created: 'DESC'
+                },
+                take: take,
+                skip: skip
+            });
+            const getDataAndCount = {
+                data: result,
+                count: total
+            };
+            console.log(getDataAndCount);
+            return getDataAndCount;
+        }
     }
     async findDistictAccount() {
         return await this.repositoryService.accountModel.find();
@@ -51,17 +113,9 @@ let AccountService = class AccountService {
         input.date_created = accountInput.date_created;
         input.username = accountInput.username;
         input.password = accountInput.password;
+        input.updated_date = accountInput.updated_date;
         try {
-            const verify = await this.repositoryService.accountModel.findOne({ username: accountInput.username });
-            if (!verify) {
-                return await this.repositoryService.accountModel.save(input);
-            }
-            else {
-                throw new common_1.HttpException({
-                    status: common_1.HttpStatus.AMBIGUOUS,
-                    error: 'Account already exist',
-                }, common_1.HttpStatus.AMBIGUOUS);
-            }
+            return await this.repositoryService.accountModel.save(input);
         }
         catch (exception) {
             throw new common_1.HttpException({
@@ -84,6 +138,7 @@ let AccountService = class AccountService {
         input.temperature = surveyInput.temperature;
         input.agreement = surveyInput.agreement;
         input.account_type = surveyInput.account_type;
+        input.identifier = surveyInput.identifier;
         input.date_created = surveyInput.date_created;
         return await this.repositoryService.surveyModel.save(input);
     }

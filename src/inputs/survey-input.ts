@@ -3,7 +3,7 @@ import { Field, ID, InputType } from "@nestjs/graphql";
 @InputType()
 export class SurveyInput {
     @Field({nullable: true })
-    id: number;
+    id: string;
 
     @Field({nullable: true})
     level: string;
@@ -28,6 +28,9 @@ export class SurveyInput {
 
     @Field({nullable: true})
     account_type: string;   
+
+    @Field({nullable: true})
+    identifier: string;
     
     @Field({nullable: true})
     date_created: Date;   
