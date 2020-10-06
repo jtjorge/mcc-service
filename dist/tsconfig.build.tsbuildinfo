@@ -5026,7 +5026,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "fa29fc60a159c23bd79d45e72aa072594665a93912d6dda745ffaac510839c0e",
+        "version": "31a69120570e392b5df171a40033a5895ea75477d077dbf9d0d9bdc34d8bd133",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -9563,9 +9563,7 @@
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/@types/node/path.d.ts",
-        "../src/account/account.module.ts",
-        "../src/app.controller.ts",
-        "../src/app.service.ts"
+        "../src/account/account.module.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
