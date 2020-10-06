@@ -13,7 +13,7 @@ export declare class AccountResolver {
     getAllManagedAccounts(take: number, skip: number, user_level: string, keyword: string): Promise<AccountManageStore>;
     getDistinctAccount(): Promise<AccountModel[]>;
     createUpdateAccount(createUpdate: AccountInput): Promise<AccountInput>;
-    getAllSurvey(level: number, uniqueNumber: string): Promise<SurveyModel[]>;
+    getAllSurvey(level: number, uniqueNumber: string, fromToDate: string): Promise<SurveyModel[]>;
     getCredentials(user_id: string, password: string): Promise<AccountModel>;
     createUpdateSurvey(createUpdate: SurveyInput): Promise<SurveyModel>;
     getAllQuestions(take: number, skip: number): Promise<QuestionsModel[]>;

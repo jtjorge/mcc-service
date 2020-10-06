@@ -38,8 +38,8 @@ let AccountResolver = class AccountResolver {
     async createUpdateAccount(createUpdate) {
         return this.accountService.createUpdate(createUpdate);
     }
-    async getAllSurvey(level, uniqueNumber) {
-        return await this.accountService.getAllSurvey(level, uniqueNumber);
+    async getAllSurvey(level, uniqueNumber, fromToDate) {
+        return await this.accountService.getAllSurvey(level, uniqueNumber, fromToDate);
     }
     async getCredentials(user_id, password) {
         return await this.accountService.login(user_id, password);
@@ -89,8 +89,9 @@ __decorate([
     graphql_1.Query(() => [survey_1.SurveyModel], { nullable: true }),
     __param(0, graphql_1.Args('level', { type: () => graphql_1.Int })),
     __param(1, graphql_1.Args('uniqueNumber', { type: () => String })),
+    __param(2, graphql_1.Args('fromToDate', { type: () => String })),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number, String]),
+    __metadata("design:paramtypes", [Number, String, String]),
     __metadata("design:returntype", Promise)
 ], AccountResolver.prototype, "getAllSurvey", null);
 __decorate([

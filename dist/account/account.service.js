@@ -25,14 +25,18 @@ let AccountService = class AccountService {
     async findAll(take, skip) {
         return await this.repositoryService.accountModel.find({ take: take, skip: skip });
     }
-    async getAllSurvey(level, uniqueNumber) {
-        if (level != 0) {
+    async getAllSurvey(level, uniqueNumber, fromToDate) {
+        const splitted = fromToDate.split(",", 2);
+        const bet = new Date(splitted[0]).toISOString();
+        const ween = new Date(splitted[1]).toISOString();
+        if (level == 1 && 2 && 3) {
             return await this.repositoryService.surveyModel.find({
                 order: {
                     date_created: 'DESC'
                 },
                 where: {
-                    level: level
+                    level: level,
+                    date_created: typeorm_1.Between(`${bet}`, `${ween}`)
                 }
             });
         }
@@ -52,6 +56,9 @@ let AccountService = class AccountService {
             return await this.repositoryService.surveyModel.find({
                 order: {
                     date_created: 'DESC'
+                },
+                where: {
+                    date_created: typeorm_1.Between(`${bet}`, `${ween}`)
                 }
             });
         }
@@ -90,7 +97,6 @@ let AccountService = class AccountService {
                 data: result,
                 count: total
             };
-            console.log(getDataAndCount);
             return getDataAndCount;
         }
     }

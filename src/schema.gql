@@ -55,7 +55,7 @@ type Query {
   getAllAccounts(skip: Int!, take: Int!): [AccountModel!]
   getAllManagedAccounts(keyword: String, user_level: String!, skip: Int!, take: Int!): AccountManageStore
   getDistinctAccount: [AccountModel!]
-  getAllSurvey(uniqueNumber: String!, level: Int!): [SurveyModel!]
+  getAllSurvey(fromToDate: String!, uniqueNumber: String!, level: Int!): [SurveyModel!]
   getCredentials(password: String!, username: String!): AccountModel
   getAllQuestions(skip: Int!, take: Int!): [QuestionsModel!]
 }

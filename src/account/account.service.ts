@@ -18,14 +18,19 @@ export class AccountService {
         return await this.repositoryService.accountModel.find({ take: take, skip: skip });
       }
 
-      async getAllSurvey(level:number,uniqueNumber:string): Promise<SurveyModel[]> {
-        if(level != 0){
+      async getAllSurvey(level:number,uniqueNumber:string, fromToDate: string): Promise<SurveyModel[]> {
+        const splitted = fromToDate.split(",", 2); 
+        const bet = new Date(splitted[0]).toISOString();
+        const ween = new Date(splitted[1]).toISOString();
+
+        if(level == 1 && 2 && 3){
           return await this.repositoryService.surveyModel.find({
             order:{
               date_created: 'DESC'
             },
             where:{
-              level: level
+              level: level,
+              date_created: Between(`${bet}`,`${ween}`)
             }
           });
         }else if(uniqueNumber !== 'undefined' && 'null'){
@@ -41,9 +46,13 @@ export class AccountService {
           });
         }
         else{
+
           return await this.repositoryService.surveyModel.find({
             order:{
               date_created: 'DESC'
+            },
+            where:{
+              date_created: Between(`${bet}`,`${ween}`)
             }
           });
         }
@@ -82,7 +91,6 @@ export class AccountService {
             data:result,
             count: total
           }
-          console.log(getDataAndCount);
           return getDataAndCount;
         }
       }

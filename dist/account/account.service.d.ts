@@ -10,7 +10,7 @@ export declare class AccountService {
     private repositoryService;
     constructor(repositoryService: RepositoryService);
     findAll(take: number, skip: number): Promise<AccountModel[]>;
-    getAllSurvey(level: number, uniqueNumber: string): Promise<SurveyModel[]>;
+    getAllSurvey(level: number, uniqueNumber: string, fromToDate: string): Promise<SurveyModel[]>;
     findAllManagedAccounts(take: number, skip: number, user_level: string, keyword: string): Promise<AccountManageStore>;
     findDistictAccount(): Promise<AccountModel[]>;
     login(username: string, password: string): Promise<AccountModel>;

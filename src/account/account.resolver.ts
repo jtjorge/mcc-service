@@ -41,8 +41,9 @@ export class AccountResolver{
 
     @Query(() => [SurveyModel], {nullable:true})
     async getAllSurvey(@Args('level', { type: () => Int }) level: number,
-                      @Args('uniqueNumber', { type: () => String }) uniqueNumber: string): Promise<SurveyModel[]>{
-       return await this.accountService.getAllSurvey(level,uniqueNumber);
+                      @Args('uniqueNumber', { type: () => String }) uniqueNumber: string,
+                      @Args('fromToDate', { type: () => String }) fromToDate: string): Promise<SurveyModel[]>{
+       return await this.accountService.getAllSurvey(level,uniqueNumber,fromToDate);
     }
     @Query(()=> AccountModel, {nullable: true})
     async getCredentials(

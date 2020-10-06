@@ -15,7 +15,7 @@ import { AccountModule } from './account/account.module';
     TypeOrmModule.forRoot(),
     AccountModule, 
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  /*controllers: [AppController],
+  providers: [AppService],*/
 })
 export class AppModule {}
