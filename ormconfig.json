@@ -4,7 +4,7 @@
     "port": 3306,
     "username": "sevlaye3_jomer",
     "password": "Gr*l0v3R",
-    "database": "sevlaye3_hdlc",
+    "database": "sevlaye3_demo",
     "entities": ["dist/**/*.js"],
     "autoLoadEntities": true,
     "logging": "all",
