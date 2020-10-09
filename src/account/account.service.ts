@@ -31,7 +31,6 @@ export class AccountService {
             },
             where:{
               level: level,
-              answer: 'true',
               date_created: Between(`${bet}`,`${ween}`)
             }
           });
