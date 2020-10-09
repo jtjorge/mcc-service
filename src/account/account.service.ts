@@ -24,16 +24,31 @@ export class AccountService {
         const ween = new Date(splitted[1]).toISOString();
 
         if(level == 1 || level == 2 || level == 3){
-          return await this.repositoryService.surveyModel.find({
-            order:{
-              date_created: 'DESC',
-              answer: 'DESC'
-            },
-            where:{
-              level: level,
-              date_created: Between(`${bet}`,`${ween}`)
-            }
-          });
+          if(level == 3){
+            return await this.repositoryService.surveyModel.find({
+              order:{
+                date_created: 'DESC',
+                answer: 'DESC'
+              },
+              where:{
+                level: level,
+                answer: 'false',
+                date_created: Between(`${bet}`,`${ween}`)
+              }
+            });
+          }else{
+            return await this.repositoryService.surveyModel.find({
+              order:{
+                date_created: 'DESC',
+                answer: 'DESC'
+              },
+              where:{
+                level: level,
+                answer: 'true',
+                date_created: Between(`${bet}`,`${ween}`)
+              }
+            });
+          }
         }else if(uniqueNumber !== 'undefined' && 'null'){
           const yesterday = ( d => new Date(d.setDate(d.getDate()-1)) )(new Date);
           return await this.repositoryService.surveyModel.find({
