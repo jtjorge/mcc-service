@@ -23,7 +23,7 @@ export class AccountService {
         const bet = new Date(splitted[0]).toISOString();
         const ween = new Date(splitted[1]).toISOString();
 
-        if(level == 1 && 2 && 3){
+        if(level == 1 || level == 2 || level == 3){
           return await this.repositoryService.surveyModel.find({
             order:{
               date_created: 'DESC'
