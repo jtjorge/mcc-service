@@ -26,7 +26,8 @@ export class AccountService {
         if(level == 1 || level == 2 || level == 3){
           return await this.repositoryService.surveyModel.find({
             order:{
-              date_created: 'DESC'
+              date_created: 'DESC',
+              answer: 'DESC'
             },
             where:{
               level: level,
