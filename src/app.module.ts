@@ -10,7 +10,7 @@ import { AccountModule } from './account/account.module';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       installSubscriptionHandlers: true,
       debug: false,
-      playground: false
+      playground: true
     }),
     TypeOrmModule.forRoot(),
     AccountModule, 
