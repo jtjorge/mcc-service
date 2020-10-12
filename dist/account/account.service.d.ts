@@ -1,3 +1,5 @@
+import { NotificationInput } from './../inputs/notification';
+import { NotificationModel } from './../entity/notification';
 import { QuestionInput } from './../inputs/question-inputs';
 import { QuestionsModel } from './../entity/questions';
 import { SurveyInput } from './../inputs/survey-input';
@@ -19,4 +21,6 @@ export declare class AccountService {
     createUpdateSurvey(surveyInput: SurveyInput): Promise<SurveyModel>;
     findAllQuestion(take: number, skip: number): Promise<QuestionsModel[]>;
     createUpdateQuestion(questionInput: QuestionInput): Promise<QuestionsModel>;
+    createUpdateNotif(notif: NotificationInput): Promise<NotificationModel>;
+    findAllNotif(take: number, skip: number): Promise<NotificationModel[]>;
 }

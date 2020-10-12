@@ -17,7 +17,7 @@ const questions_1 = require("./questions");
 let SurveyModel = class SurveyModel extends typeorm_1.BaseEntity {
 };
 __decorate([
-    graphql_1.Field({ nullable: false }),
+    graphql_1.Field({ nullable: true }),
     typeorm_1.PrimaryGeneratedColumn('uuid'),
     __metadata("design:type", String)
 ], SurveyModel.prototype, "id", void 0);

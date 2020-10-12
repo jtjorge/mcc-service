@@ -7,7 +7,7 @@ import { QuestionsModel } from './questions';
 @Entity({name: "tbl_survey"})
 export class SurveyModel extends BaseEntity{
 
-    @Field({nullable: false})
+    @Field({nullable: true})
     @PrimaryGeneratedColumn('uuid')
     id: string;
 

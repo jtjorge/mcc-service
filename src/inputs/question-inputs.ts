@@ -6,10 +6,10 @@ export class QuestionInput {
     @Field({nullable: true })
     id: number;
 
-    @Field({nullable: false})
+    @Field({nullable: true})
     level: number;
 
-    @Field({nullable: false})
+    @Field({nullable: true})
     question: string;
 
 }

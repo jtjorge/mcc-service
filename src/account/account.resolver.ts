@@ -1,18 +1,20 @@
+import { NotificationModel } from './../entity/notification';
 import { QuestionInput } from './../inputs/question-inputs';
 import { QuestionsModel } from './../entity/questions';
 import { AccountModel } from './../entity/account';
-import { Args, Int, Mutation, Query, Resolver } from "@nestjs/graphql";
+import { Args, Int, Mutation, Query, Resolver, Subscription } from "@nestjs/graphql";
 import { AccountService } from "./account.service";
 import { AccountInput } from 'src/inputs/account-input';
 import { SurveyModel } from 'src/entity/survey';
 import { SurveyInput } from 'src/inputs/survey-input';
-import { Any } from 'typeorm';
 import { AccountManageStore } from 'src/entity/response-storage/AccountManageStore';
+import { NotificationInput } from 'src/inputs/notification';
+import { PubSub } from 'graphql-subscriptions';
 
+const pubSub = new PubSub();
 @Resolver()
 export class AccountResolver{
     constructor( private accountService: AccountService){}
-    
     @Query(() => [AccountModel], {nullable:true})
     async getAllAccounts(
         @Args('take', { type: () => Int }) take: number,
@@ -70,4 +72,26 @@ export class AccountResolver{
         return this.accountService.createUpdateQuestion(createUpdateQuestion);
     }
 
+    @Query(() => [QuestionsModel], {nullable:true})
+    async getAllNotif(
+        @Args('take', { type: () => Int }) take: number,
+        @Args('skip', { type: () => Int }) skip: number,) {
+       return this.accountService.findAllNotif(take,skip);
+    }
+
+    public notificationTrigger = 'probable';
+    @Mutation(() => NotificationModel, {nullable: true})
+    async createUpdateNotif(@Args('createUpdateNotif',{nullable:true}) createUpdateNotif: NotificationInput): Promise<NotificationModel> {
+        const notifAdded : NotificationModel = await this.accountService.createUpdateNotif(createUpdateNotif);
+        pubSub.publish(this.notificationTrigger,{probable: notifAdded});
+        return await notifAdded;
+    }
+
+    @Subscription(() => NotificationModel,{
+        filter: (payload, variables) =>
+          payload.probable.flag === variables.flag
+      })
+    probable(@Args('flag') flag: string) {
+      return pubSub.asyncIterator(this.notificationTrigger);
+    }
 }

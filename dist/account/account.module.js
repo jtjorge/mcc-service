@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountModule = void 0;
+const notification_1 = require("./../entity/notification");
 const questions_1 = require("./../entity/questions");
 const survey_1 = require("./../entity/survey");
 const repository_service_1 = require("../repository/repository.service");
@@ -19,7 +20,7 @@ let AccountModule = class AccountModule {
 };
 AccountModule = __decorate([
     common_1.Module({
-        imports: [typeorm_1.TypeOrmModule.forFeature([account_1.AccountModel, survey_1.SurveyModel, questions_1.QuestionsModel])],
+        imports: [typeorm_1.TypeOrmModule.forFeature([account_1.AccountModel, survey_1.SurveyModel, questions_1.QuestionsModel, notification_1.NotificationModel])],
         providers: [account_resolver_1.AccountResolver,
             account_service_1.AccountService,
             repository_service_1.default],

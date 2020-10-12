@@ -2,6 +2,17 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type NotificationModel {
+  id: String
+  flag: String
+  account_name: String
+  question: String
+  unique_number: String
+  view_date: String
+  viewed_by: String
+  date: String
+}
+
 type AccountModel {
   id: String!
   username: String
@@ -23,7 +34,7 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 scalar DateTime
 
 type SurveyModel {
-  id: String!
+  id: String
   level: String
   answer: String
   question_id: String
@@ -39,10 +50,10 @@ type SurveyModel {
 }
 
 type QuestionsModel {
-  id: Float!
-  level: Float!
-  question: String!
-  created_date: DateTime!
+  id: Float
+  level: Float
+  question: String
+  created_date: DateTime
   questionSurvey: [SurveyModel!]
 }
 
@@ -58,12 +69,14 @@ type Query {
   getAllSurvey(fromToDate: String!, uniqueNumber: String!, level: Int!): [SurveyModel!]
   getCredentials(password: String!, username: String!): AccountModel
   getAllQuestions(skip: Int!, take: Int!): [QuestionsModel!]
+  getAllNotif(skip: Int!, take: Int!): [QuestionsModel!]
 }
 
 type Mutation {
   createUpdateAccount(createUpdate: AccountInput!): AccountModel
   createUpdateSurvey(createUpdateSurvey: SurveyInput!): SurveyModel
   createUpdateQuestion(createUpdateQuestion: QuestionInput!): QuestionsModel
+  createUpdateNotif(createUpdateNotif: NotificationInput): NotificationModel
 }
 
 input AccountInput {
@@ -96,6 +109,20 @@ input SurveyInput {
 
 input QuestionInput {
   id: Float
-  level: Float!
-  question: String!
+  level: Float
+  question: String
+}
+
+input NotificationInput {
+  flag: String
+  account_name: String
+  question: String
+  unique_number: String
+  view_date: String
+  viewed_by: String
+  date: String
+}
+
+type Subscription {
+  probable(flag: String!): NotificationModel!
 }

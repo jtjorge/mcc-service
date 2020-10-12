@@ -16,22 +16,22 @@ const typeorm_1 = require("typeorm");
 let QuestionsModel = class QuestionsModel extends typeorm_1.BaseEntity {
 };
 __decorate([
-    graphql_1.Field({ nullable: false }),
+    graphql_1.Field({ nullable: true }),
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
 ], QuestionsModel.prototype, "id", void 0);
 __decorate([
-    graphql_1.Field({ nullable: false }),
+    graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
     __metadata("design:type", Number)
 ], QuestionsModel.prototype, "level", void 0);
 __decorate([
-    graphql_1.Field({ nullable: false }),
+    graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
     __metadata("design:type", String)
 ], QuestionsModel.prototype, "question", void 0);
 __decorate([
-    graphql_1.Field({ nullable: false }),
+    graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
     __metadata("design:type", Date)
 ], QuestionsModel.prototype, "created_date", void 0);

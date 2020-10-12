@@ -1,3 +1,5 @@
+import { NotificationInput } from './../inputs/notification';
+import { NotificationModel } from './../entity/notification';
 import { QuestionInput } from './../inputs/question-inputs';
 import { QuestionsModel } from './../entity/questions';
 import { SurveyInput } from './../inputs/survey-input';
@@ -8,7 +10,6 @@ import RepositoryService from "src/repository/repository.service";
 import { AccountInput } from 'src/inputs/account-input';
 import getRepository, { Between, Equal, Like, MoreThan } from "typeorm";
 import { AccountManageStore } from 'src/entity/response-storage/AccountManageStore';
-import { start } from 'repl';
 
 @Injectable()
 export class AccountService {
@@ -179,6 +180,22 @@ export class AccountService {
         input.level = questionInput.level,
         input.question = questionInput.question
       return await this.repositoryService.questionsModel.save(input);
+    }
+
+    async createUpdateNotif(notif: NotificationInput): Promise<NotificationModel> {
+      const input = new NotificationModel();
+        input.flag = notif.flag;
+        input.account_name = notif.account_name;
+        input.question = notif.question;
+        input.unique_number = notif.unique_number;
+        input.view_date = notif.view_date;
+        input.viewed_by = notif.viewed_by;
+        input.date = notif.date;
+      return await this.repositoryService.notificationModel.save(input);
+    }
+
+    async findAllNotif(take: number, skip: number): Promise<NotificationModel[]> {
+      return await this.repositoryService.notificationModel.find({ take: take, skip: skip });
     }
     
 }

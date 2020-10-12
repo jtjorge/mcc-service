@@ -9,8 +9,10 @@ import { AccountModule } from './account/account.module';
     GraphQLModule.forRoot({ 
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       installSubscriptionHandlers: true,
-      debug: false,
-      playground: true
+      debug: true,
+      subscriptions: {
+        keepAlive: 5000,
+      }
     }),
     TypeOrmModule.forRoot(),
     AccountModule, 

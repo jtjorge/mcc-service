@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountService = void 0;
+const notification_1 = require("./../entity/notification");
 const questions_1 = require("./../entity/questions");
 const survey_1 = require("../entity/survey");
 const account_1 = require("../entity/account");
@@ -29,16 +30,33 @@ let AccountService = class AccountService {
         const splitted = fromToDate.split(",", 2);
         const bet = new Date(splitted[0]).toISOString();
         const ween = new Date(splitted[1]).toISOString();
-        if (level == 1 && 2 && 3) {
-            return await this.repositoryService.surveyModel.find({
-                order: {
-                    date_created: 'DESC'
-                },
-                where: {
-                    level: level,
-                    date_created: typeorm_1.Between(`${bet}`, `${ween}`)
-                }
-            });
+        if (level == 1 || level == 2 || level == 3) {
+            if (level == 3) {
+                return await this.repositoryService.surveyModel.find({
+                    order: {
+                        date_created: 'DESC',
+                        answer: 'DESC'
+                    },
+                    where: {
+                        level: level,
+                        answer: 'false',
+                        date_created: typeorm_1.Between(`${bet}`, `${ween}`)
+                    }
+                });
+            }
+            else {
+                return await this.repositoryService.surveyModel.find({
+                    order: {
+                        date_created: 'DESC',
+                        answer: 'DESC'
+                    },
+                    where: {
+                        level: level,
+                        answer: 'true',
+                        date_created: typeorm_1.Between(`${bet}`, `${ween}`)
+                    }
+                });
+            }
         }
         else if (uniqueNumber !== 'undefined' && 'null') {
             const yesterday = (d => new Date(d.setDate(d.getDate() - 1)))(new Date);
@@ -157,6 +175,20 @@ let AccountService = class AccountService {
             input.level = questionInput.level,
             input.question = questionInput.question;
         return await this.repositoryService.questionsModel.save(input);
+    }
+    async createUpdateNotif(notif) {
+        const input = new notification_1.NotificationModel();
+        input.flag = notif.flag;
+        input.account_name = notif.account_name;
+        input.question = notif.question;
+        input.unique_number = notif.unique_number;
+        input.view_date = notif.view_date;
+        input.viewed_by = notif.viewed_by;
+        input.date = notif.date;
+        return await this.repositoryService.notificationModel.save(input);
+    }
+    async findAllNotif(take, skip) {
+        return await this.repositoryService.notificationModel.find({ take: take, skip: skip });
     }
 };
 AccountService = __decorate([

@@ -18,11 +18,13 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const account_1 = require("../entity/account");
+const notification_1 = require("../entity/notification");
 let RepositoryService = class RepositoryService {
-    constructor(accountModel, surveyModel, questionsModel) {
+    constructor(accountModel, surveyModel, questionsModel, notificationModel) {
         this.accountModel = accountModel;
         this.surveyModel = surveyModel;
         this.questionsModel = questionsModel;
+        this.notificationModel = notificationModel;
     }
 };
 RepositoryService = __decorate([
@@ -30,7 +32,9 @@ RepositoryService = __decorate([
     __param(0, typeorm_1.InjectRepository(account_1.AccountModel)),
     __param(1, typeorm_1.InjectRepository(survey_1.SurveyModel)),
     __param(2, typeorm_1.InjectRepository(questions_1.QuestionsModel)),
+    __param(3, typeorm_1.InjectRepository(notification_1.NotificationModel)),
     __metadata("design:paramtypes", [typeorm_2.Repository,
+        typeorm_2.Repository,
         typeorm_2.Repository,
         typeorm_2.Repository])
 ], RepositoryService);

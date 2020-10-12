@@ -1,3 +1,4 @@
+import { NotificationModel } from './../entity/notification';
 import { QuestionsModel } from './../entity/questions';
 import { SurveyModel } from './../entity/survey';
 import  RepositoryService from 'src/repository/repository.service';
@@ -8,7 +9,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AccountModel } from 'src/entity/account';
 
 @Module({
-    imports:[TypeOrmModule.forFeature([AccountModel,SurveyModel, QuestionsModel])],
+    imports:[TypeOrmModule.forFeature([AccountModel,SurveyModel, QuestionsModel, NotificationModel])],
     providers: [AccountResolver,
                 AccountService, 
                 RepositoryService],

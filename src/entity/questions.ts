@@ -6,19 +6,19 @@ import {BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGen
 @Entity({name: "tbl_question"})
 export class QuestionsModel extends BaseEntity{
 
-    @Field({nullable: false})
+    @Field({nullable: true})
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Field({nullable: false})
+    @Field({nullable: true})
     @Column()
     level: number;
 
-    @Field({nullable: false})
+    @Field({nullable: true})
     @Column()
     question: string;
 
-    @Field({nullable: false})
+    @Field({nullable: true})
     @Column()
     created_date: Date;
 

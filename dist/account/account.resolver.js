@@ -13,6 +13,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountResolver = void 0;
+const notification_1 = require("./../entity/notification");
 const question_inputs_1 = require("./../inputs/question-inputs");
 const questions_1 = require("./../entity/questions");
 const account_1 = require("./../entity/account");
@@ -22,9 +23,13 @@ const account_input_1 = require("../inputs/account-input");
 const survey_1 = require("../entity/survey");
 const survey_input_1 = require("../inputs/survey-input");
 const AccountManageStore_1 = require("../entity/response-storage/AccountManageStore");
+const notification_2 = require("../inputs/notification");
+const graphql_subscriptions_1 = require("graphql-subscriptions");
+const pubSub = new graphql_subscriptions_1.PubSub();
 let AccountResolver = class AccountResolver {
     constructor(accountService) {
         this.accountService = accountService;
+        this.notificationTrigger = 'probable';
     }
     async getAllAccounts(take, skip) {
         return await this.accountService.findAll(take, skip);
@@ -52,6 +57,17 @@ let AccountResolver = class AccountResolver {
     }
     async createUpdateQuestion(createUpdateQuestion) {
         return this.accountService.createUpdateQuestion(createUpdateQuestion);
+    }
+    async getAllNotif(take, skip) {
+        return this.accountService.findAllNotif(take, skip);
+    }
+    async createUpdateNotif(createUpdateNotif) {
+        const notifAdded = await this.accountService.createUpdateNotif(createUpdateNotif);
+        pubSub.publish(this.notificationTrigger, { probable: notifAdded });
+        return await notifAdded;
+    }
+    probable(flag) {
+        return pubSub.asyncIterator(this.notificationTrigger);
     }
 };
 __decorate([
@@ -124,6 +140,30 @@ __decorate([
     __metadata("design:paramtypes", [question_inputs_1.QuestionInput]),
     __metadata("design:returntype", Promise)
 ], AccountResolver.prototype, "createUpdateQuestion", null);
+__decorate([
+    graphql_1.Query(() => [questions_1.QuestionsModel], { nullable: true }),
+    __param(0, graphql_1.Args('take', { type: () => graphql_1.Int })),
+    __param(1, graphql_1.Args('skip', { type: () => graphql_1.Int })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, Number]),
+    __metadata("design:returntype", Promise)
+], AccountResolver.prototype, "getAllNotif", null);
+__decorate([
+    graphql_1.Mutation(() => notification_1.NotificationModel, { nullable: true }),
+    __param(0, graphql_1.Args('createUpdateNotif', { nullable: true })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [notification_2.NotificationInput]),
+    __metadata("design:returntype", Promise)
+], AccountResolver.prototype, "createUpdateNotif", null);
+__decorate([
+    graphql_1.Subscription(() => notification_1.NotificationModel, {
+        filter: (payload, variables) => payload.probable.flag === variables.flag
+    }),
+    __param(0, graphql_1.Args('flag')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], AccountResolver.prototype, "probable", null);
 AccountResolver = __decorate([
     graphql_1.Resolver(),
     __metadata("design:paramtypes", [account_service_1.AccountService])

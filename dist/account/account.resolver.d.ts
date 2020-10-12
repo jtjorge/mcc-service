@@ -1,3 +1,4 @@
+import { NotificationModel } from './../entity/notification';
 import { QuestionInput } from './../inputs/question-inputs';
 import { QuestionsModel } from './../entity/questions';
 import { AccountModel } from './../entity/account';
@@ -6,6 +7,7 @@ import { AccountInput } from 'src/inputs/account-input';
 import { SurveyModel } from 'src/entity/survey';
 import { SurveyInput } from 'src/inputs/survey-input';
 import { AccountManageStore } from 'src/entity/response-storage/AccountManageStore';
+import { NotificationInput } from 'src/inputs/notification';
 export declare class AccountResolver {
     private accountService;
     constructor(accountService: AccountService);
@@ -18,4 +20,8 @@ export declare class AccountResolver {
     createUpdateSurvey(createUpdate: SurveyInput): Promise<SurveyModel>;
     getAllQuestions(take: number, skip: number): Promise<QuestionsModel[]>;
     createUpdateQuestion(createUpdateQuestion: QuestionInput): Promise<QuestionsModel>;
+    getAllNotif(take: number, skip: number): Promise<NotificationModel[]>;
+    notificationTrigger: string;
+    createUpdateNotif(createUpdateNotif: NotificationInput): Promise<NotificationModel>;
+    probable(flag: string): AsyncIterator<unknown, any, undefined>;
 }

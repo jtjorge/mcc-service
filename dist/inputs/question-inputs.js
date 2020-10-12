@@ -18,11 +18,11 @@ __decorate([
     __metadata("design:type", Number)
 ], QuestionInput.prototype, "id", void 0);
 __decorate([
-    graphql_1.Field({ nullable: false }),
+    graphql_1.Field({ nullable: true }),
     __metadata("design:type", Number)
 ], QuestionInput.prototype, "level", void 0);
 __decorate([
-    graphql_1.Field({ nullable: false }),
+    graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)
 ], QuestionInput.prototype, "question", void 0);
 QuestionInput = __decorate([
