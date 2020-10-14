@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var _a, _b, _c, _d, _e, _f, _g;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountResolver = void 0;
 const notification_1 = require("./../entity/notification");
@@ -86,7 +87,7 @@ __decorate([
     __param(3, graphql_1.Args('keyword', { nullable: true })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number, Number, String, String]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:returntype", typeof (_a = typeof Promise !== "undefined" && Promise) === "function" ? _a : Object)
 ], AccountResolver.prototype, "getAllManagedAccounts", null);
 __decorate([
     graphql_1.Query(() => [account_1.AccountModel], { nullable: true }),
@@ -99,7 +100,7 @@ __decorate([
     __param(0, graphql_1.Args('createUpdate')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [account_input_1.AccountInput]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:returntype", typeof (_b = typeof Promise !== "undefined" && Promise) === "function" ? _b : Object)
 ], AccountResolver.prototype, "createUpdateAccount", null);
 __decorate([
     graphql_1.Query(() => [survey_1.SurveyModel], { nullable: true }),
@@ -108,7 +109,7 @@ __decorate([
     __param(2, graphql_1.Args('fromToDate', { type: () => String })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number, String, String]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:returntype", typeof (_c = typeof Promise !== "undefined" && Promise) === "function" ? _c : Object)
 ], AccountResolver.prototype, "getAllSurvey", null);
 __decorate([
     graphql_1.Query(() => account_1.AccountModel, { nullable: true }),
@@ -116,14 +117,14 @@ __decorate([
     __param(1, graphql_1.Args('password', { type: () => String })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:returntype", typeof (_d = typeof Promise !== "undefined" && Promise) === "function" ? _d : Object)
 ], AccountResolver.prototype, "getCredentials", null);
 __decorate([
     graphql_1.Mutation(() => survey_1.SurveyModel, { nullable: true }),
     __param(0, graphql_1.Args('createUpdateSurvey')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [survey_input_1.SurveyInput]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:returntype", typeof (_e = typeof Promise !== "undefined" && Promise) === "function" ? _e : Object)
 ], AccountResolver.prototype, "createUpdateSurvey", null);
 __decorate([
     graphql_1.Query(() => [questions_1.QuestionsModel], { nullable: true }),
@@ -138,7 +139,7 @@ __decorate([
     __param(0, graphql_1.Args('createUpdateQuestion')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [question_inputs_1.QuestionInput]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:returntype", typeof (_f = typeof Promise !== "undefined" && Promise) === "function" ? _f : Object)
 ], AccountResolver.prototype, "createUpdateQuestion", null);
 __decorate([
     graphql_1.Query(() => [questions_1.QuestionsModel], { nullable: true }),
@@ -153,7 +154,7 @@ __decorate([
     __param(0, graphql_1.Args('createUpdateNotif', { nullable: true })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [notification_2.NotificationInput]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:returntype", typeof (_g = typeof Promise !== "undefined" && Promise) === "function" ? _g : Object)
 ], AccountResolver.prototype, "createUpdateNotif", null);
 __decorate([
     graphql_1.Subscription(() => notification_1.NotificationModel, {

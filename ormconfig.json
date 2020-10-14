@@ -8,6 +8,7 @@
     "entities": ["dist/**/*.js"],
     "autoLoadEntities": true,
     "logging": "all",
+    "cache": 3000,
     "migrations": ["src/migration/**/*.ts"],
     "subscribers": ["src/subscriber/**/*.ts"],
     "cli": {

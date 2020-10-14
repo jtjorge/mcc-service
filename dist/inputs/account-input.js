@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AccountInput = void 0;
 const graphql_1 = require("@nestjs/graphql");
@@ -51,11 +52,11 @@ __decorate([
 ], AccountInput.prototype, "user_level", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
-    __metadata("design:type", Date)
+    __metadata("design:type", typeof (_a = typeof Date !== "undefined" && Date) === "function" ? _a : Object)
 ], AccountInput.prototype, "date_created", void 0);
 __decorate([
     graphql_1.Field({ nullable: true }),
-    __metadata("design:type", Date)
+    __metadata("design:type", typeof (_b = typeof Date !== "undefined" && Date) === "function" ? _b : Object)
 ], AccountInput.prototype, "updated_date", void 0);
 AccountInput = __decorate([
     graphql_1.InputType()

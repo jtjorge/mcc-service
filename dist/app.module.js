@@ -12,6 +12,7 @@ const graphql_1 = require("@nestjs/graphql");
 const path_1 = require("path");
 const typeorm_1 = require("@nestjs/typeorm");
 const account_module_1 = require("./account/account.module");
+const redisStore = require("cache-manager-redis-store");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -20,13 +21,17 @@ AppModule = __decorate([
             graphql_1.GraphQLModule.forRoot({
                 autoSchemaFile: path_1.join(process.cwd(), 'src/schema.gql'),
                 installSubscriptionHandlers: true,
-                debug: true,
+                debug: false,
+                playground: false,
                 subscriptions: {
                     keepAlive: 5000,
                 }
             }),
             typeorm_1.TypeOrmModule.forRoot(),
             account_module_1.AccountModule,
+            common_1.CacheModule.register({
+                store: redisStore,
+            })
         ],
     })
 ], AppModule);

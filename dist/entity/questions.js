@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.QuestionsModel = void 0;
 const survey_1 = require("./survey");
@@ -17,7 +18,7 @@ let QuestionsModel = class QuestionsModel extends typeorm_1.BaseEntity {
 };
 __decorate([
     graphql_1.Field({ nullable: true }),
-    typeorm_1.PrimaryGeneratedColumn(),
+    typeorm_1.PrimaryColumn(),
     __metadata("design:type", Number)
 ], QuestionsModel.prototype, "id", void 0);
 __decorate([
@@ -33,13 +34,13 @@ __decorate([
 __decorate([
     graphql_1.Field({ nullable: true }),
     typeorm_1.Column(),
-    __metadata("design:type", Date)
+    __metadata("design:type", typeof (_a = typeof Date !== "undefined" && Date) === "function" ? _a : Object)
 ], QuestionsModel.prototype, "created_date", void 0);
 __decorate([
     graphql_1.Field(() => [survey_1.SurveyModel], { nullable: true }),
     typeorm_1.ManyToOne(() => survey_1.SurveyModel, surveyModel => surveyModel.questionModel),
     typeorm_1.JoinColumn({ name: 'id', referencedColumnName: 'question_id' }),
-    __metadata("design:type", Promise)
+    __metadata("design:type", typeof (_b = typeof Promise !== "undefined" && Promise) === "function" ? _b : Object)
 ], QuestionsModel.prototype, "questionSurvey", void 0);
 QuestionsModel = __decorate([
     graphql_1.ObjectType(),

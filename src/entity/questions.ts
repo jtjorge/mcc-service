@@ -1,13 +1,13 @@
 import { SurveyModel } from 'src/entity/survey';
-import { Field, ID, ObjectType } from '@nestjs/graphql';
-import {BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import { Field, ObjectType } from '@nestjs/graphql';
+import {BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryColumn} from "typeorm";
 
 @ObjectType()
 @Entity({name: "tbl_question"})
 export class QuestionsModel extends BaseEntity{
 
     @Field({nullable: true})
-    @PrimaryGeneratedColumn()
+    @PrimaryColumn()
     id: number;
 
     @Field({nullable: true})
