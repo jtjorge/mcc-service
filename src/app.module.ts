@@ -11,8 +11,8 @@ import { AccountModule } from './account/account.module';
     GraphQLModule.forRoot({ 
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       installSubscriptionHandlers: true,
-      debug: false,
-      playground:false,
+      debug: true,
+      playground:true,
       subscriptions: {
         keepAlive: 5000,
       },

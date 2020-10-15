@@ -1,4 +1,4 @@
-# MCC-Service - For health testing.
+# Demo-Service - For health testing.
 
 ``To run:``
 `npm start start`

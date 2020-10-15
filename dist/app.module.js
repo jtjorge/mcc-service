@@ -21,8 +21,8 @@ AppModule = __decorate([
             graphql_1.GraphQLModule.forRoot({
                 autoSchemaFile: path_1.join(process.cwd(), 'src/schema.gql'),
                 installSubscriptionHandlers: true,
-                debug: false,
-                playground: false,
+                debug: true,
+                playground: true,
                 subscriptions: {
                     keepAlive: 5000,
                 },
