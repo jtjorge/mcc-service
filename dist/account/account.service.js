@@ -41,7 +41,8 @@ let AccountService = class AccountService {
                         level: level,
                         answer: 'false',
                         date_created: typeorm_1.Between(`${bet}`, `${ween}`)
-                    }
+                    },
+                    relations: ['accountModel', 'questionModel']
                 });
             }
             else {
@@ -54,7 +55,8 @@ let AccountService = class AccountService {
                         level: level,
                         answer: 'true',
                         date_created: typeorm_1.Between(`${bet}`, `${ween}`)
-                    }
+                    },
+                    relations: ['accountModel', 'questionModel']
                 });
             }
         }
@@ -67,7 +69,8 @@ let AccountService = class AccountService {
                 where: {
                     identifier: uniqueNumber,
                     date_created: typeorm_1.MoreThan(yesterday)
-                }
+                },
+                relations: ['accountModel', 'questionModel']
             });
         }
         else {
@@ -77,7 +80,8 @@ let AccountService = class AccountService {
                 },
                 where: {
                     date_created: typeorm_1.Between(`${bet}`, `${ween}`)
-                }
+                },
+                relations: ['accountModel', 'questionModel']
             });
         }
     }

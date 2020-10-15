@@ -1,8 +1,9 @@
+import { CustomContext } from './../types/customContext';
 import { NotificationModel } from './../entity/notification';
 import { QuestionInput } from './../inputs/question-inputs';
 import { QuestionsModel } from './../entity/questions';
 import { AccountModel } from './../entity/account';
-import { Args, Int, Mutation, Query, Resolver, Subscription } from "@nestjs/graphql";
+import { Args, Context, Int, Mutation, Query, ResolveProperty, Resolver, Root, Subscription } from "@nestjs/graphql";
 import { AccountService } from "./account.service";
 import { AccountInput } from 'src/inputs/account-input';
 import { SurveyModel } from 'src/entity/survey';
@@ -10,9 +11,10 @@ import { SurveyInput } from 'src/inputs/survey-input';
 import { AccountManageStore } from 'src/entity/response-storage/AccountManageStore';
 import { NotificationInput } from 'src/inputs/notification';
 import { PubSub } from 'graphql-subscriptions';
+import { UseGuards } from '@nestjs/common';
 
 const pubSub = new PubSub();
-@Resolver()
+@Resolver(()=> SurveyModel)
 export class AccountResolver{
     constructor( private accountService: AccountService){}
     @Query(() => [AccountModel], {nullable:true})
@@ -37,6 +39,7 @@ export class AccountResolver{
     }
 
     @Mutation(() => AccountModel, {nullable: true})
+    @UseGuards()
     async createUpdateAccount(@Args('createUpdate') createUpdate: AccountInput): Promise<AccountInput> {
         return this.accountService.createUpdate(createUpdate);
     }
@@ -94,4 +97,12 @@ export class AccountResolver{
     probable(@Args('flag') flag: string) {
       return pubSub.asyncIterator(this.notificationTrigger);
     }
+
+    /*@ResolveProperty('accountModel')
+    async accountModel(
+        @Root() survey:SurveyModel,
+        @Context()ctx:CustomContext
+        ): Promise<SurveyModel[]>{
+        return await ctx.surveyLoader.load(survey.id);
+    }*/
 }

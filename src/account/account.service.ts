@@ -35,7 +35,8 @@ export class AccountService {
                 level: level,
                 answer: 'false',
                 date_created: Between(`${bet}`,`${ween}`)
-              }
+              },
+              relations:['accountModel','questionModel']
             });
           }else{
             return await this.repositoryService.surveyModel.find({
@@ -47,7 +48,8 @@ export class AccountService {
                 level: level,
                 answer: 'true',
                 date_created: Between(`${bet}`,`${ween}`)
-              }
+              },
+              relations:['accountModel','questionModel']
             });
           }
         }else if(uniqueNumber !== 'undefined' && 'null'){
@@ -59,7 +61,8 @@ export class AccountService {
             where:{
               identifier:uniqueNumber,
               date_created: MoreThan(yesterday) 
-            }
+            },
+            relations:['accountModel','questionModel']
           });
         }
         else{
@@ -70,7 +73,8 @@ export class AccountService {
             },
             where:{
               date_created: Between(`${bet}`,`${ween}`)
-            }
+            },
+            relations:['accountModel','questionModel']
           });
         }
       }
