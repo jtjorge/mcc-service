@@ -22,7 +22,7 @@ AppModule = __decorate([
                 autoSchemaFile: path_1.join(process.cwd(), 'src/schema.gql'),
                 installSubscriptionHandlers: true,
                 debug: false,
-                playground: true,
+                playground: false,
                 subscriptions: {
                     keepAlive: 5000,
                 },

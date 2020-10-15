@@ -12,7 +12,7 @@ import { AccountModule } from './account/account.module';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       installSubscriptionHandlers: true,
       debug: false,
-      playground:true,
+      playground:false,
       subscriptions: {
         keepAlive: 5000,
       },
