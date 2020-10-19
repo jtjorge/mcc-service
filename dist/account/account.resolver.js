@@ -143,7 +143,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AccountResolver.prototype, "createUpdateQuestion", null);
 __decorate([
-    graphql_1.Query(() => [questions_1.QuestionsModel], { nullable: true }),
+    graphql_1.Query(() => [notification_1.NotificationModel], { nullable: true }),
     __param(0, graphql_1.Args('take', { type: () => graphql_1.Int })),
     __param(1, graphql_1.Args('skip', { type: () => graphql_1.Int })),
     __metadata("design:type", Function),

@@ -3,6 +3,10 @@ import {Entity} from "typeorm";
 
 @InputType()
 export class NotificationInput {
+
+    @Field({nullable: true})
+    id: string
+
     @Field({nullable: true})
     flag: string
 

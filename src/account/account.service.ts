@@ -188,6 +188,7 @@ export class AccountService {
 
     async createUpdateNotif(notif: NotificationInput): Promise<NotificationModel> {
       const input = new NotificationModel();
+        input.id = notif.id;
         input.flag = notif.flag;
         input.account_name = notif.account_name;
         input.question = notif.question;
@@ -199,7 +200,14 @@ export class AccountService {
     }
 
     async findAllNotif(take: number, skip: number): Promise<NotificationModel[]> {
-      return await this.repositoryService.notificationModel.find({ take: take, skip: skip });
+      return await this.repositoryService.notificationModel.find({ take: take, skip: skip,
+        where:{
+          view_date: ""
+        },
+        order:{
+          date: "DESC"
+      }
+     });
     }
     
 }

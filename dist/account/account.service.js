@@ -182,6 +182,7 @@ let AccountService = class AccountService {
     }
     async createUpdateNotif(notif) {
         const input = new notification_1.NotificationModel();
+        input.id = notif.id;
         input.flag = notif.flag;
         input.account_name = notif.account_name;
         input.question = notif.question;
@@ -192,7 +193,14 @@ let AccountService = class AccountService {
         return await this.repositoryService.notificationModel.save(input);
     }
     async findAllNotif(take, skip) {
-        return await this.repositoryService.notificationModel.find({ take: take, skip: skip });
+        return await this.repositoryService.notificationModel.find({ take: take, skip: skip,
+            where: {
+                view_date: ""
+            },
+            order: {
+                date: "DESC"
+            }
+        });
     }
 };
 AccountService = __decorate([

@@ -69,7 +69,7 @@ type Query {
   getAllSurvey(fromToDate: String!, uniqueNumber: String!, level: Int!): [SurveyModel!]
   getCredentials(password: String!, username: String!): AccountModel
   getAllQuestions(skip: Int!, take: Int!): [QuestionsModel!]
-  getAllNotif(skip: Int!, take: Int!): [QuestionsModel!]
+  getAllNotif(skip: Int!, take: Int!): [NotificationModel!]
 }
 
 type Mutation {
@@ -114,6 +114,7 @@ input QuestionInput {
 }
 
 input NotificationInput {
+  id: String
   flag: String
   account_name: String
   question: String

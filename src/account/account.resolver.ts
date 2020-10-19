@@ -75,7 +75,7 @@ export class AccountResolver{
         return this.accountService.createUpdateQuestion(createUpdateQuestion);
     }
 
-    @Query(() => [QuestionsModel], {nullable:true})
+    @Query(() => [NotificationModel], {nullable:true})
     async getAllNotif(
         @Args('take', { type: () => Int }) take: number,
         @Args('skip', { type: () => Int }) skip: number,) {
